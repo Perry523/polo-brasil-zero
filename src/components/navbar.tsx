@@ -27,12 +27,9 @@ export const Navbar: React.FC<NavbarProps> = ({
 	React.useEffect(() => {
 		const handleScroll = () => {
 			const isScrollDown = window.scrollY > 0;
-			console.log("isScrollDown", isScrollDown);
 			setScrollDown(isScrollDown);
 		};
-
 		window.addEventListener("scroll", handleScroll);
-
 		return () => {
 			window.removeEventListener("scroll", handleScroll);
 		};
@@ -54,7 +51,37 @@ export const Navbar: React.FC<NavbarProps> = ({
 	const handleGoToTop = () => {
 		window.scrollTo({ top: 0, behavior: "smooth" });
 	};
-
+	const arrayForNav = [
+		{
+			name: "Lotes",
+			reference: ourGroundReference,
+		},
+		{
+			name: "Sobre nós",
+			reference: aboutUsReference,
+		},
+		{
+			name: "Sustentabilidade",
+			reference: sustentabilityReference,
+		},
+		{
+			name: "Netzero",
+			reference: netzeroReference,
+		}
+		,
+		{
+			name: "Parceiros",
+			reference: partinersReference,
+		},
+		{
+			name: "ESG",
+			reference: esgReference,
+		},
+		{
+			name: "Contato",
+			reference: contactReference,
+		},
+	]
 	return (
 		<nav
 			className={`z-[99] py-6 transition-all duration-200 fixed top-0 w-full ${
@@ -62,10 +89,10 @@ export const Navbar: React.FC<NavbarProps> = ({
 			}`}
 		>
 			<div className="wrapper-full flex justify-between items-center">
-				<a href="https://polobrasilzero.com/" className="shrink-0 w-[180px]">
+				<a href="#" className="shrink-0 w-[250px]">
 					<StaticImage
 						loading="lazy"
-						src="../images/logo.svg"
+						src="../images/logo-white.svg"
 						alt="Logo da empresa Polo Brasil Zero."
 					/>
 				</a>
@@ -95,31 +122,13 @@ export const Navbar: React.FC<NavbarProps> = ({
 					{/* <li>
 						<a onClick={(_) => handleGoToTop()}>Homepage</a>
 					</li> */}
-					<li>
-						<a onClick={(_) => handleGoToAnchor(ourGroundReference)}>Lotes</a>
-					</li>
-					<li>
-						<a onClick={(_) => handleGoToAnchor(aboutUsReference)}>Sobre nós</a>
-					</li>
-					<li>
-						<a onClick={(_) => handleGoToAnchor(sustentabilityReference)}>
-							Sustentabilidade
-						</a>
-					</li>
-					<li>
-						<a onClick={(_) => handleGoToAnchor(netzeroReference)}>Netzero</a>
-					</li>
-					<li>
-						<a onClick={(_) => handleGoToAnchor(partinersReference)}>
-							Parceiros
-						</a>
-					</li>
-					<li>
-						<a onClick={(_) => handleGoToAnchor(esgReference)}>ESG</a>
-					</li>
-					<li>
-						<a onClick={(_) => handleGoToAnchor(contactReference)}>Contato</a>
-					</li>
+					{arrayForNav.map((item, index) => (
+						<li key={index}>
+							<a onClick={(_) => handleGoToAnchor(item.reference)}>
+								{item.name}
+							</a>
+						</li>
+					))}
 					<li>
 						<button type="button" className="bt bt-primary shrink-0">
 							<StaticImage

@@ -1,5 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
+import Slider from 'react-slick';
 
 const GetOwnLot = () => {
 	const [activedPreSalesImage, setActivedPreSalesImage] = React.useState(0);
@@ -19,10 +20,9 @@ const GetOwnLot = () => {
 	const handleClickPreSaleImage = (preSaleImage: number) => {
 		setActivedPreSalesImage(preSaleImage);
 	};
-
 	return (
-		<section className="bg-colorful lg:py-8 py-4 wrapper-full bg-no-repeat bg-center bg-cover">
-			<div className="flex flex-col lg:flex-row justify-between max-lg:p-2 bg-white rounded-3xl lg:!p-7 items-center lg:w-full w-[93vw] -ml-7 lg:ml-0">
+		<section id="about" className="bg-colorful lg:py-8 py-4 wrapper-full bg-no-repeat bg-center bg-cover">
+			<div className="flex flex-col lg:flex-row justify-between max-lg:p-2 bg-white rounded-3xl lg:!p-7 items-center w-full lg:ml-0">
 				<div className="max-lg:w-full col-span-5">
 					<div className="relative flex justify-center items-center">
 						{activedPreSalesImage === 0 && (
@@ -132,19 +132,19 @@ const GetOwnLot = () => {
 					</div>
 				</div>
 				<div className="w-full">
-					<div className="lg:flex flex-col items-center m-auto max-lg:mt-12">
-						<h2 className="text-green-700 text-center">
+					<div className="lg:flex flex-col items-center m-auto max-lg:mt-12 text-center">
+						<h2 className="text-green-700 ">
 							Pré lançamento <br /> de vendas
 						</h2>
-						<h3 className="mt-2 text-green-700 font-semibold text-center">
+						<h3 className="mt-2 text-green-700 font-semibold ">
 							Investimento em Real Estate
 						</h3>
-						<p className="text-center mt-10 text-green-800 lg:w-80">
+						<p className=" mt-10 text-green-800 lg:w-80">
 							Todos os lotes são carbono neutro já equipados com tubulações
 							centrais de abastecimento e tratamento de água, rede de coleta dos
-							efluentes Industriais e sanitários ligado na ETE.
+							efluentes Industriais e sanitários ligado na ETE. Tratamento de resíduos I, II, IIA e IIB
 						</p>
-						<h3 className="mt-10 text-green-700 font-bold">Garanta seu lote</h3>
+						<h3 className="mt-10 text-green-700 font-bold ">Garanta seu lote</h3>
 						<span className="text-green-700 mt-1">
 							Entrega finalizada em 2024
 						</span>

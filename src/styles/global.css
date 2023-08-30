@@ -169,3 +169,10 @@ h4 {
 /* .bg-leave {
   background-image: url("/img/leave-bg.jpg");
 } */
+@media (max-width: 830px){
+	#about {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+}
