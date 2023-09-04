@@ -5,27 +5,19 @@
     </head>
     <navbar />
 
-    <header @open-video="handleOpenVideo" />
+    <videos @open-video="handleOpenVideo" />
 
-    <lot-about-section @open-video="handleOpenVideo" />
+    <land @open-video="handleOpenVideo" />
     <get-own-lot />
     <about-us @open-video="handleOpenVideo" />
     <our-principles />
-    <NetZero :netzeroRef="netzeroRef" />
-    <Partiners :partinersRef="partinersRef" />
-    <ScheduleEsg :esgRef="esgRef" />
-    <contact :contactRef="contactRef" />
+    <ambitions />
+    <partners />
+    <ScheduleEsg />
+    <contact />
 
-    <NewsLetter />
-    <footer
-      :ourGroundReference="ourGroundRef"
-      :aboutUsReference="aboutUsRef"
-      :sustentabilityReference="sustentabilityRef"
-      :netzeroReference="netzeroRef"
-      :partinersReference="partinersRef"
-      :esgReference="esgRef"
-      :contactReference="contactRef"
-    />
+    <posts />
+    <footer />
     <a :href="whatsappUrl" class="fixed bottom-10 right-10 w-14 h-14 z-50"> </a>
   </div>
 </template>

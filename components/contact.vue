@@ -76,9 +76,6 @@
 
 <script setup>
 import { ref } from "vue";
-import Input from "~/components/Input.vue"; // Atualize para o caminho correto
-import Selectable from "~/components/Selectable.vue"; // Atualize para o caminho correto
-
 const contactRef = ref(null);
 const contactTypeSelectedOption = ref(-1);
 

@@ -19,25 +19,21 @@
       >
         <p class="text-green-800 font-bold">Planta dos Lotes de Venda</p>
         <img
-          src="~/static/images/pbz-render-video-banner.webp"
+          src="/images/pbz-render-video-banner.webp"
           alt="Vídeo ilustrativo renderizado do Polo Brasil Zero"
           class="rounded-3xl !w-full border border-green-500 mt-2"
         />
-        <img
-          src="~/static/images/play.svg"
-          alt="Ícone de play"
-          class="!absolute"
-        />
+        <img src="/images/play.svg" alt="Ícone de play" class="!absolute" />
       </div>
     </div>
     <div class="wrapper-full">
       <img
-        src="~/static/images/ground.svg"
+        src="/images/ground.svg"
         alt="Planta do parque industrial"
         class="mx-auto block w-fit mt-16 max-lg:!hidden"
       />
       <img
-        src="~/static/images/map-responsive.png"
+        src="/images/map-responsive.png"
         alt="Planta do parque industrial"
         class="mx-auto block w-full mt-16 lg:!hidden"
       />
@@ -46,11 +42,7 @@
         class="bt bt-outline-primary mx-auto mt-9 flex justify-center items-center max-lg:w-full"
         @click="scrollToAboutUs"
       >
-        <img
-          src="~/static/images/download.svg"
-          alt="Ícone de baixar"
-          class="bt-icon"
-        />
+        <img src="/images/download.svg" alt="Ícone de baixar" class="bt-icon" />
         <span class="ml-3 text-green-700 font-bold text-lg">Baixar e-book</span>
       </button>
     </div>
@@ -58,8 +50,6 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
-
 const ourGroundRef = ref(null);
 const aboutUsRef = ref(null);
 

@@ -20,11 +20,7 @@
           <span class="text-green-800 mt-4 font-bold">
             Projeção de emissões de GEE na atmosfera
           </span>
-          <img
-            src="~/static/images/netzero.gif"
-            alt=""
-            class="rounded-3xl mt-4"
-          />
+          <img src="/images/netzero.gif" alt="" class="rounded-3xl mt-4" />
           <span class="text-green-800 mt-2">
             Fonte: NASA Scientific Visualization Studio
           </span>
