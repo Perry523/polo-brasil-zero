@@ -29,24 +29,20 @@
         <p className="text-green-800 font-bold mb-2 lg:mb-0">
           Apresentação do Projeto Total
         </p>
-        <StaticImage
+        <img
           className="rounded-3xl w-full border border-green-500 mt-2"
           alt="Vídeo ilustrativo renderizado do Polo Brasil Zero"
-          src="../../images/pbz-render-video-banner-2.jpg"
+          src="/images/pbz-render-video-banner-2.jpg"
           layout="fullWidth"
         />
-        <StaticImage
-          alt="Ícone de play"
-          src="../../images/play.svg"
-          className="!absolute"
-        />
+        <img alt="Ícone de play" src="/images/play.svg" className="!absolute" />
       </div>
     </div>
 
     <div className="flex wrapper-full lg:mt-24 items-center max-lg:flex-col">
-      <StaticImage
+      <img
         alt="Imagem que mostra o plano ESG. (ambiental, social, governança, econômico, tecnológico)"
-        src="../../images/esg.png"
+        src="/images/esg.png"
         className="shrink-0 max-lg:mt-12 w-[300px]"
       />
       <div className="lg:ml-10 max-lg:text-center">
@@ -73,17 +69,13 @@
         <p className="text-green-800 font-bold mb-2 lg:mb-0">
           Chamado para Sustentabilidade
         </p>
-        <StaticImage
+        <img
           className="rounded-3xl !w-full border border-green-500 mt-2"
           alt="Vídeo ilustrativo renderizado do Polo Brasil Zero"
-          src="../../images/pbz-render-video-banner-3.jpg"
+          src="/images/pbz-render-video-banner-3.jpg"
           layout="fullWidth"
         />
-        <StaticImage
-          alt="Ícone de play"
-          src="../../images/play.svg"
-          className="!absolute"
-        />
+        <img alt="Ícone de play" src="/images/play.svg" className="!absolute" />
       </div>
     </div>
 
@@ -98,9 +90,9 @@
           podem revolucionar o futuro da indústria, das pessoas e do planeta.
         </p>
       </div>
-      <StaticImage
+      <img
         alt="Lista de todas as ODS's da ONU"
-        src="../../images/odss.png"
+        src="/images/odss.png"
         className="shrink-0 lg:ml-20 max-lg:mt-12 w-full lg:w-[531px]"
         objectFit="contain"
         layout="fullWidth"

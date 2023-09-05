@@ -25,7 +25,7 @@
           Nos siga nas redes sociais
         </h3>
         <div
-          class="mt-3 flex items-center max-lg:justify-center lg:justify-start"
+          class="mt-3 space-x-4 flex items-center max-lg:justify-center lg:justify-start"
         >
           <img
             v-for="(image, index) in socialImages"
@@ -33,6 +33,7 @@
             :src="image"
             :class="imageClass"
             :alt="`Social image ${index + 1}`"
+            class="w-10"
           />
         </div>
       </div>
@@ -95,19 +96,19 @@ import { ref } from "vue";
 
 const isGreen = ref(true); // Mudar conforme sua lógica
 
-const logoWhite = "path/to/logo-white.svg";
-const logoGreen = "path/to/logo-green.png";
+const logoWhite = "/images/logo-white.svg";
+const logoGreen = "/images/logo-green.png";
 const altText = "Logo da empresa Polo Brasil Zero";
 const emailText = "lhmt@polobrasilzero.com";
 const imageClass = "object-left-top w-[200px]";
 
 const socialImages = isGreen.value
   ? [
-      "path/to/facebook-white.svg",
-      "path/to/linkedin-white.svg",
-      "path/to/instagram-white.svg",
+      "/images/facebook-white.svg",
+      "/images/linkedin-white.svg",
+      "/images/instagram-white.svg",
     ]
-  : ["path/to/facebook.png", "path/to/linkedin.png", "path/to/instagram.png"];
+  : ["/images/facebook.png", "/images/linkedin.png", "/images/instagram.png"];
 
 const firstMenuItems = [
   { text: "Esg - Blog", reference: "esgReference" },

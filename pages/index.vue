@@ -9,7 +9,8 @@
 
     <land @open-video="handleOpenVideo" />
     <get-own-lot />
-    <about-us @open-video="handleOpenVideo" />
+    <lot-about />
+    <about @open-video="handleOpenVideo" />
     <our-principles />
     <ambitions />
     <partners />
@@ -17,7 +18,8 @@
     <contact />
 
     <posts />
-    <footer />
+    <newsletter />
+    <the-footer />
     <a :href="whatsappUrl" class="fixed bottom-10 right-10 w-14 h-14 z-50"> </a>
   </div>
 </template>

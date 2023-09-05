@@ -9,14 +9,14 @@
       <a href="#" class="shrink-0 w-[250px]">
         <!-- Substituir por uma tag <img> ou componente de imagem -->
         <img
-          src="@/assets/logo-white.svg"
+          src="/images/logo-white.svg"
           alt="Logo da empresa Polo Brasil Zero"
         />
       </a>
       <a href="#" @click="toggleMenu">
         <!-- Substituir por uma tag <img> ou componente de imagem -->
         <img
-          src="@/assets/menu-hamburger.svg"
+          src="/images/menu-hamburger.svg"
           alt="Menu hamburger"
           class="2xl:!hidden cursor-pointer"
         />
@@ -44,7 +44,7 @@
           <button type="button" class="bt bt-primary shrink-0">
             <!-- Substituir por uma tag <img> ou componente de imagem -->
             <img
-              src="@/assets/send.svg"
+              src="/images/send.svg"
               alt="Ícone de baixar"
               class="bt-icon mr-3"
             />
