@@ -4,17 +4,13 @@
       <title>Polo Brasil Zero - Distrito Industrial 100% sustentável.</title>
     </head>
     <navbar />
-
     <videos @open-video="handleOpenVideo" />
-
     <land @open-video="handleOpenVideo" />
     <get-own-lot />
     <lot-about />
     <about @open-video="handleOpenVideo" />
-    <our-principles />
     <ambitions />
     <partners />
-    <ScheduleEsg />
     <contact />
 
     <posts />
