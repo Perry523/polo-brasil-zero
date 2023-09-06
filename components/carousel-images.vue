@@ -36,7 +36,7 @@
   </Carousel>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { Carousel, Navigation, Pagination, Slide } from "vue3-carousel";
 import "vue3-carousel/dist/carousel.css";
 const slides = [
@@ -48,7 +48,7 @@ const slides = [
 ];
 const currentSlide = ref(0);
 const myCarousel = ref(null);
-function goToSlide(slide: number) {
+function goToSlide(slide) {
   myCarousel.value.slideTo(slide);
 }
 // console.log(mainCarousel);
