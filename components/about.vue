@@ -39,7 +39,15 @@
           src="/images/pbz-render-video-banner-2.jpg"
           layout="fullWidth"
         />
-        <img alt="Ícone de play" src="/images/play.svg" className="!absolute" />
+        <a
+          class="border-4 border-white mx-auto top-36 absolute z-[60] rounded-full flex justify-center items-center w-20 h-20"
+        >
+          <nuxt-img
+            src="/images/play-outline.svg"
+            alt="Clique aqui para dar play"
+            class="w-6 ml-2 !absolute"
+          />
+        </a>
       </div>
     </div>
 
@@ -80,7 +88,15 @@
           src="/images/pbz-render-video-banner-3.jpg"
           layout="fullWidth"
         />
-        <img alt="Ícone de play" src="/images/play.svg" className="!absolute" />
+        <a
+          class="border-4 border-white mx-auto top-36 absolute z-[60] rounded-full flex justify-center items-center w-20 h-20"
+        >
+          <nuxt-img
+            src="/images/play-outline.svg"
+            alt="Clique aqui para dar play"
+            class="w-6 ml-2 !absolute"
+          />
+        </a>
       </div>
     </div>
 
@@ -130,7 +146,7 @@
           <nuxt-img
             src="/images/play-outline.svg"
             alt="Clique aqui para dar play"
-            class="w-6 ml-2"
+            class="w-6 ml-2 !absolute"
           />
         </a>
         <div class="flex flex-col absolute w-10/12 bottom-4 z-[60]">

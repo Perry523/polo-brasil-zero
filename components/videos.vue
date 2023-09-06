@@ -1,5 +1,5 @@
 <template>
-  <Carousel>
+  <Carousel id="carousel">
     <Slide
       v-for="{ title, description, videoSrc } in slidesData"
       :key="videoSrc"
@@ -94,7 +94,11 @@ const emit = defineEmits(["open"]);
   justify-content: center;
   align-items: center;
 }
-
+#carousel {
+  .carousel__item {
+    border-radius: 0px !important;
+  }
+}
 .carousel__pagination-button {
   --tw-bg-opacity: 1;
   background-color: rgb(132 132 132 / var(--tw-bg-opacity));

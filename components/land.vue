@@ -23,7 +23,15 @@
           alt="Vídeo ilustrativo renderizado do Polo Brasil Zero"
           class="rounded-3xl !w-full border border-green-500 mt-2"
         />
-        <img src="/images/play.svg" alt="Ícone de play" class="!absolute" />
+        <a
+          class="border-4 border-white mx-auto top-36 absolute z-[60] rounded-full flex justify-center items-center w-20 h-20"
+        >
+          <nuxt-img
+            src="/images/play-outline.svg"
+            alt="Clique aqui para dar play"
+            class="w-6 ml-2 !absolute"
+          />
+        </a>
       </div>
     </div>
     <div class="wrapper-full">
