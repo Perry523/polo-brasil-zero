@@ -30,18 +30,22 @@
         <li class="absolute left-3 top-3 !mt-0">
           <a href="#" @click="toggleMenu">
             <!-- Substituir por uma tag <img> ou componente de imagem -->
-            <img
+            <XMarkIcon
               src="@/assets/close.svg"
               alt="Fechar menu hamburger"
-              class="2xl:!hidden cursor-pointer"
+              class="2xl:!hidden cursor-pointer w-8 text-white"
             />
           </a>
         </li>
         <li v-for="(item, index) in arrayForNav" :key="index">
-          <a @click="handleGoToAnchor(item)">{{ item }}</a>
+          <a @click="handleGoToAnchor(item.anchor)">{{ item.label }}</a>
         </li>
         <li>
-          <button type="button" class="bt bt-primary shrink-0">
+          <button
+            @click="handleGoToAnchor('contactRef')"
+            type="button"
+            class="bt bt-primary shrink-0 flex"
+          >
             <!-- Substituir por uma tag <img> ou componente de imagem -->
             <img
               src="/images/send.svg"
@@ -58,7 +62,7 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
-
+import { XMarkIcon } from "@heroicons/vue/24/solid";
 const scrollDown = ref(false);
 const isMenuOpen = ref(false);
 
@@ -83,21 +87,38 @@ const handleGoToAnchor = (ref) => {
     window.location.href = "/";
     return;
   }
-  const section = ref.value;
-  if (section) {
-    const y = section.getBoundingClientRect().top + window.scrollY - 121;
-    window.scrollTo({ top: y, behavior: "smooth" });
-  }
+  emit("goToAnchor", ref);
 };
-
+const emit = defineEmits(["goToAnchor"]);
 const arrayForNav = [
-  "Lotes",
-  "Sobre nós",
-  "Sustentabilidade",
-  "Netzero",
-  "Parceiros",
-  "ESG",
-  "Contato",
+  {
+    label: "Lotes",
+    anchor: "ourGroundRef",
+  },
+  {
+    label: "Sobre nós",
+    anchor: "aboutUsRef",
+  },
+  {
+    label: "Sustentabilidade",
+    anchor: "sustentabilityRef",
+  },
+  {
+    label: "Netzero",
+    anchor: "netzeroRef",
+  },
+  {
+    label: "Parceiros",
+    anchor: "partinersRef",
+  },
+  {
+    label: "ESG",
+    anchor: "esgRef",
+  },
+  {
+    label: "Contato",
+    anchor: "contactRef",
+  },
 ];
 </script>
 

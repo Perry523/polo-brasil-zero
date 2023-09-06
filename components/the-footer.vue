@@ -6,9 +6,10 @@
       <div
         class="lg:w-[300px] flex max-lg:items-center lg:items-start flex-col"
       >
-        <img
+        <nuxt-img
           :src="isGreen ? logoWhite : logoGreen"
           :alt="altText"
+          class="w-52"
           :class="imageClass"
         />
         <span
@@ -31,7 +32,7 @@
             v-for="(image, index) in socialImages"
             :key="index"
             :src="image"
-            :class="imageClass"
+            :class="[...imageClass, index === 3 ? 'w-14' : '']"
             :alt="`Social image ${index + 1}`"
             class="w-10"
           />
@@ -67,7 +68,9 @@
             >
               <a @click="goToAnchor(menuItem.reference)">{{ menuItem.text }}</a>
             </li>
-            <li class="font-bold">Baixar e-book</li>
+            <li @click="goToAnchor('contactRef')" class="font-bold">
+              Baixar e-book
+            </li>
           </div>
         </ul>
       </div>
@@ -94,13 +97,13 @@
 <script setup>
 import { ref } from "vue";
 
-const isGreen = ref(true); // Mudar conforme sua lógica
-
+const isGreen = ref(false); // Mudar conforme sua lógica
+const emit = defineEmits(["anchor", "openVideo"]);
 const logoWhite = "/images/logo-white.svg";
 const logoGreen = "/images/logo-green.png";
 const altText = "Logo da empresa Polo Brasil Zero";
 const emailText = "lhmt@polobrasilzero.com";
-const imageClass = "object-left-top w-[200px]";
+const imageClass = "object-left-top";
 
 const socialImages = isGreen.value
   ? [
@@ -108,22 +111,27 @@ const socialImages = isGreen.value
       "/images/linkedin-white.svg",
       "/images/instagram-white.svg",
     ]
-  : ["/images/facebook.png", "/images/linkedin.png", "/images/instagram.png"];
+  : [
+      "/images/facebook.png",
+      "/images/linkedin.png",
+      "/images/instagram.png",
+      "/images/icon-youtube.svg",
+    ];
 
 const firstMenuItems = [
-  { text: "Esg - Blog", reference: "esgReference" },
-  { text: "Sobre Nós", reference: "aboutUsReference" },
-  { text: "Sustentabilidade", reference: "sustentabilityReference" },
-  { text: "Terrenos", reference: "ourGroundReference" },
+  { text: "Esg - Blog", reference: "esgRef" },
+  { text: "Sobre Nós", reference: "aboutUsRef" },
+  { text: "Sustentabilidade", reference: "sustentabilityRef" },
+  { text: "Terrenos", reference: "ourGroundRef" },
 ];
 
 const secondMenuItems = [
-  { text: "Parceiros", reference: "partinersReference" },
-  { text: "Contato", reference: "contactReference" },
+  { text: "Parceiros", reference: "partnersRef" },
+  { text: "Contato", reference: "contactRef" },
 ];
 
 function goToAnchor(reference) {
-  console.log(`Rolando para ${reference}`);
+  emit("go-to-anchor", reference);
 }
 </script>
 <style scoped></style>

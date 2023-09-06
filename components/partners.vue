@@ -1,8 +1,8 @@
 <template>
-  <div class="px-10 pb-10 bg-gray-200 lg:w-full">
+  <div id="partnersRef" class="px-10 pb-10 bg-gray-200 lg:w-full">
     <h2
       class="pt-12 mb-5 lg:mb-0 text-green-800 max-lg:text-center"
-      ref="partinersRef"
+      id="partinersRef"
     >
       Parceiros estratégicos
     </h2>

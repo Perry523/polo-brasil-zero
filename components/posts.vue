@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-green-100 py-16" ref="esgRef">
+  <section class="bg-green-100 py-16" id="esgRef">
     <div>
       <h2 class="wrapper-full text-green-800">Agenda ESG</h2>
       <div class="h-[240px] w-full flex justify-center items-center">

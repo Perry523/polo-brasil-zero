@@ -1,5 +1,5 @@
 <template>
-  <section className="lg:mb-16 mb-8 mt-16" ref="{aboutUsRef}">
+  <section className="lg:mb-16 mb-8 mt-16" id="aboutUsRef">
     <div className="flex wrapper-full items-center max-lg:flex-col">
       <div className="flex flex-col max-lg:text-center max-lg:items-center">
         <h2 className="lg:w-80 xl:w-auto text-green-800 max-lg:text-center">
@@ -18,18 +18,22 @@
           econômicos, sociais e ambientais visando criar valor a longo prazo
           para as empresas, sociedade e o meio ambiente.
         </p>
-        <button type="button" className="bt bt-outline-primary mt-4">
+        <button
+          @click="emit('anchor', 'contactRef')"
+          type="button"
+          className="bt bt-outline-primary mt-4"
+        >
           Saiba mais
         </button>
       </div>
       <div
         className="w-full h-auto lg:w-[450px] lg:h-[340px] shrink-0 lg:ml-20 relative flex justify-center items-center cursor-pointer max-lg:mt-7 flex-col"
-        @click="handleOpenVideo('https://www.youtube.com/embed/b6SDcbE3y98')"
+        @click="emit('open', 'b6SDcbE3y98')"
       >
         <p className="text-green-800 font-bold mb-2 lg:mb-0">
           Apresentação do Projeto Total
         </p>
-        <img
+        <nuxt-img
           className="rounded-3xl w-full border border-green-500 mt-2"
           alt="Vídeo ilustrativo renderizado do Polo Brasil Zero"
           src="/images/pbz-render-video-banner-2.jpg"
@@ -55,6 +59,7 @@
           em sustentabilidade.
         </p>
         <button
+          @click="emit('anchor', 'contactRef')"
           type="button"
           className="bt bt-outline-primary mt-6 lg:mt-4 mb-2 lg:mb-0"
         >
@@ -64,7 +69,7 @@
       <div
         className="lg:w-[450px] lg:h-[340px] shrink-0 ml-20 relative flex justify-center
 						items-center cursor-pointer max-lg:mt-5 max-lg:w-full max-lg:ml-0 lg:ml-10 flex-col"
-        @click="handleOpenVideo('https://www.youtube.com/embed/fL2jcCSN2pc')"
+        @click="emit('open', 'fL2jcCSN2pc')"
       >
         <p className="text-green-800 font-bold mb-2 lg:mb-0">
           Chamado para Sustentabilidade
@@ -81,7 +86,7 @@
 
     <div
       className="wrapper-full flex max-lg:flex-col justify-center lg:justify-between lg:mt-24 mt-20"
-      ref="{sustentabilityRef}"
+      id="sustentabilityRef"
     >
       <div className="max-lg:text-center ">
         <h2 className="text-green-800">Sustentabilidade</h2>
@@ -139,10 +144,7 @@
   </section>
 </template>
 <script setup lang="ts">
-function handleOpenVideo(link: string) {
-  //   isVideoOpen.value = true;
-  //   selectedVideoShow.value = link;
-}
+const emit = defineEmits(["anchor", "open"]);
 const videos = ref([
   {
     id: 1,

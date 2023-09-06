@@ -6,22 +6,33 @@ export default defineNuxtConfig({
     "@nuxt/image-edge",
     "@pinia/nuxt",
     "@pinia-plugin-persistedstate/nuxt",
+    "@vite-pwa/nuxt"
   ],
   typescript: {
-    typeCheck: true,
+    typeCheck: true
   },
   tailwindcss: {
     cssPath: "~/assets/css/tailwind.scss",
-    viewer: true,
+    viewer: true
   },
   devtools: {
-    enabled: true,
+    enabled: true
   },
   pinia: {
-    autoImports: ["defineStore", "storeToRefs"],
+    autoImports: ["defineStore", "storeToRefs"]
   },
   piniaPersistedstate: {
-    storage: "localStorage",
+    storage: "localStorage"
   },
   ssr: false,
+  pwa: {
+    manifest: {
+      name: "Polo Brasil",
+      short_name: "Polo brasil",
+      description: "Site do polo Brasil",
+      lang: "pt-BR",
+      theme_color: "#ffffff",
+      background_color: "#ffffff"
+    }
+  }
 });

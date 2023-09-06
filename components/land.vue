@@ -1,5 +1,5 @@
 <template>
-  <section class="py-16 shrink-0 grow bg-leave" ref="ourGroundRef">
+  <section class="py-16 shrink-0 grow bg-leave" id="ourGroundRef">
     <div
       class="flex wrapper-full max-lg:justify-center max-lg:flex-col max-lg:items-center"
     >
@@ -15,7 +15,7 @@
       </div>
       <div
         class="lg:w-[450px] lg:h-[340px] shrink-0 relative flex justify-center items-center cursor-pointer max-lg:mt-5 max-lg:w-full max-lg:ml-0 flex-col ml-20"
-        @click="handleOpenVideo('https://www.youtube.com/embed/FuCpCoSmRBg')"
+        @click="emit('open', 'FuCpCoSmRBg')"
       >
         <p class="text-green-800 font-bold">Planta dos Lotes de Venda</p>
         <img
@@ -40,7 +40,7 @@
       <button
         type="button"
         class="bt bt-outline-primary mx-auto mt-9 flex justify-center items-center max-lg:w-full"
-        @click="scrollToAboutUs"
+        @click="emit('anchor', 'contactRef')"
       >
         <img src="/images/download.svg" alt="Ícone de baixar" class="bt-icon" />
         <span class="ml-3 text-green-700 font-bold text-lg">Baixar e-book</span>
@@ -50,22 +50,5 @@
 </template>
 
 <script setup>
-const ourGroundRef = ref(null);
-const aboutUsRef = ref(null);
-
-const handleOpenVideo = (link) => {
-  // openVideo(link);
-};
-
-const scrollToAboutUs = () => {
-  aboutUsRef.value?.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
-    inline: "nearest",
-  });
-};
+const emit = defineEmits(["open"]);
 </script>
-
-<style scoped>
-/* seus estilos aqui */
-</style>

@@ -16,6 +16,7 @@
         'rounded-md shadow-input h-[52px] p-3 text-green-800',
         inputClasses,
       ]"
+      class="w-full"
       :placeholder="placeholder"
     />
   </div>

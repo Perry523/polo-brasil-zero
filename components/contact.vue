@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-green-700 max-lg:pt-16 lg:py-16" ref="contactRef">
+  <section class="bg-green-700 max-lg:pt-16 lg:py-16" id="contactRef">
     <div class="flex items-center max-lg:flex-col wrapper-full">
       <div class="flex flex-col max-lg:flex">
         <h2 class="text-white max-lg:text-center">
@@ -7,17 +7,17 @@
           contato
         </h2>
         <div class="mt-16 p-3 border-white rounded-md border lg:w-[330px]">
-          <img alt="Ícone de email" src="/images/mail.svg" class="mr-2" />
+          <!-- <img alt="Ícone de email" src="/images/mail.svg" class="mr-2" /> -->
           <span class="text-white">lhmt@polobrasilzero.com</span>
         </div>
         <div
           class="mt-4 p-3 border-white rounded-md border lg:w-[330px] flex items-center"
         >
-          <img
+          <!-- <img
             alt="Ícone de endereço"
             src="/images/map.svg"
             class="mr-4 shrink-0 h-[21px]"
-          />
+          /> -->
           <span class="text-white block">
             Av. Ayrton Senna da Silva - KM 497 Jardim Industriario, CEP
             78099-499 / Cuiabá - MT
@@ -25,7 +25,7 @@
         </div>
       </div>
       <div
-        class="flex flex-col shrink-0 max-lg:w-screen lg:w-[600px] p-12 bg-white rounded-2xl lg:ml-20 max-lg:mt-10 max-lg:shadow-2xl"
+        class="flex flex-col gap-y-4 shrink-0 max-lg:w-screen lg:w-[600px] p-12 bg-white rounded-2xl lg:ml-20 max-lg:mt-10 max-lg:shadow-2xl"
       >
         <Input name="name" placeholder="Seu nome" label="Nome:" />
         <Input

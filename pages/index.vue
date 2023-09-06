@@ -3,36 +3,55 @@
     <head>
       <title>Polo Brasil Zero - Distrito Industrial 100% sustentável.</title>
     </head>
-    <navbar />
-    <videos @open-video="handleOpenVideo" />
-    <land @open-video="handleOpenVideo" />
-    <get-own-lot />
-    <lot-about />
-    <about @open-video="handleOpenVideo" />
+    <navbar @go-to-anchor="goToAnchor" />
+    <videos @open="handleOpenVideo('b6SDcbE3y98')" />
+    <land @anchor="goToAnchor" @open="handleOpenVideo" />
+    <lot-about @anchor="goToAnchor" />
+    <about @anchor="goToAnchor" @open="handleOpenVideo" />
     <ambitions />
     <partners />
-    <contact />
 
     <posts />
+    <contact />
     <newsletter />
-    <the-footer />
-    <a :href="whatsappUrl" class="fixed bottom-10 right-10 w-14 h-14 z-50"> </a>
+    <the-footer @go-to-anchor="goToAnchor" />
+    <a :href="whatsappUrl" class="fixed bottom-10 right-10 w-14 h-14 z-50">
+      <nuxt-img
+        alt="Ícone de enviar mensagem pelo whatsapp"
+        src="/images/whatsapp-icon.png"
+        className=""
+      />
+    </a>
+    <modal
+      v-if="isVideoOpen"
+      :videoSrc="selectedVideoShow"
+      @close="handleCloseVideoClick"
+    />
   </div>
 </template>
 
 <script setup>
+import { ref } from "vue";
 const ourGroundRef = ref(null);
 const aboutUsRef = ref(null);
 const sustentabilityRef = ref(null);
 const netzeroRef = ref(null);
-const partinersRef = ref(null);
+const partnersRef = ref(null);
 const esgRef = ref(null);
 const contactRef = ref(null);
 
 const activedSlide = ref(0);
 const isVideoOpen = ref(false);
 const selectedVideoShow = ref("");
-
+function goToAnchor(anchor) {
+  console.log(`Rolando para ${anchor}`);
+  const ref = document.getElementById(anchor);
+  ref?.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+    inline: "nearest",
+  });
+}
 const whatsappUrl =
   "https://wa.me/5511971657007?text=Ol%C3%A1%2C+quero+saber+mais+sobre+o+projeto+Polo+Brasil+Zero.";
 
@@ -57,17 +76,14 @@ const handleOpenVideo = (link) => {
   isVideoOpen.value = true;
 };
 
-watch(
-  activedSlide,
-  (newValue) => {
-    const interval = setInterval(() => {
-      activedSlide.value = (newValue + 1) % 5;
-    }, 3000);
-
-    return () => clearInterval(interval);
-  },
-  { immediate: true }
-);
+useSeoMeta({
+  title: "Polo Brasil Zero - Distrito Industrial 100% sustentável.",
+  ogTitle: "Polo Brasil Zero - Distrito Industrial 100% sustentável.",
+  description: "Site do Polo Brasil Zero",
+  ogDescription: "Site do Polo Brasil Zero",
+  ogImage: "images/pbz-render-video-banner-2.webp",
+  // twitterCard: "summary_large_image",
+});
 </script>
 
 <style scoped>
