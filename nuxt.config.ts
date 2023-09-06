@@ -32,7 +32,39 @@ export default defineNuxtConfig({
       description: "Site do polo Brasil",
       lang: "pt-BR",
       theme_color: "#ffffff",
-      background_color: "#ffffff"
+      background_color: "#ffffff",
+      icons: [
+        {
+          src: "/images/logo-green.png",
+          type: "image/png",
+          sizes: "512x512"
+        }
+      ],
+      id: "/?source=pwa",
+      start_url: "/?source=pwa",
+      display: "standalone",
+      scope: "/",
+      shortcuts: [
+        {
+          name: "Polo Brasil",
+          short_name: "Polo Brasil",
+          description: "Polo Brasil",
+          url: "/",
+          icons: [{ src: "/images/logo-green.png", sizes: "192x192" }]
+        }
+      ]
+      // screenshots: [
+      //   {
+      //     src: "/images/screenshot1.png",
+      //     type: "image/png",
+      //     sizes: "540x720",
+      //   },
+      //   {
+      //     src: "/images/screenshot2.jpg",
+      //     type: "image/jpg",
+      //     sizes: "720x540",
+      //   }
+      // ]
     }
   }
 });
