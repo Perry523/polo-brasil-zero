@@ -27,37 +27,37 @@ const partners = ref([
   {
     id: 1,
     url: "https://www.pactoglobal.org.br/",
-    imageSrc: "../../images/partner-one.png",
+    imageSrc: "/images/partner-one.png",
     alt: "Imagem de um parceiro estratégico",
   },
   {
     id: 2,
     url: "https://www.pactoglobal.org.br/pg/hub-ods/",
-    imageSrc: "../../images/partner-three.png",
+    imageSrc: "/images/partner-three.png",
     alt: "Imagem de um parceiro estratégico",
   },
   {
     id: 3,
     url: "https://eaesp.fgv.br/centros/centro-estudos-sustentabilidade/projetos/programa-brasileiro-ghg-protocol",
-    imageSrc: "../../images/partner-two.png",
+    imageSrc: "/images/partner-two.png",
     alt: "Imagem de um parceiro estratégico",
   },
   {
     id: 4,
     url: "https://www.globalreporting.org/",
-    imageSrc: "../../images/partner-four.png",
+    imageSrc: "/images/partner-four.png",
     alt: "Imagem de um parceiro estratégico",
   },
   {
     id: 5,
     url: "https://sasb.org/",
-    imageSrc: "../../images/partner-five.png",
+    imageSrc: "/images/partner-five.png",
     alt: "Imagem de um parceiro estratégico",
   },
   {
     id: 6,
     url: "https://www.ibgc.org.br/",
-    imageSrc: "../../images/partner-six.png",
+    imageSrc: "/images/partner-six.png",
     alt: "Imagem de um parceiro estratégico",
   },
 ]);

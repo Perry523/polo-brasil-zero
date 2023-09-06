@@ -127,8 +127,8 @@
         <a
           class="border-4 border-white mx-auto top-32 absolute z-[60] rounded-full flex justify-center items-center w-20 h-20"
         >
-          <img
-            src="../../images/play-outline.svg"
+          <nuxt-img
+            src="/images/play-outline.svg"
             alt="Clique aqui para dar play"
             class="w-6 ml-2"
           />
@@ -150,35 +150,35 @@ const videos = ref([
     id: 1,
     title: "Reciclagem Hídrica",
     description: "Tratamento total dos efluentes sanitários e industriais",
-    imageSrc: "../../images/video-one.jpg",
+    imageSrc: "/images/video-one.jpg",
     alt: "Banner do vídeo 1",
   },
   {
     id: 2,
     title: "Reciclagem Sólidos",
     description: "Coletas, troca interna e logística reversa dos recicláveis",
-    imageSrc: "../../images/video-two.jpg",
+    imageSrc: "/images/video-two.jpg",
     alt: "Banner do vídeo 2",
   },
   {
     id: 3,
     title: "Neutralização GEE",
     description: "Mitigar emissões diretas e neutralizar pegada de carbono",
-    imageSrc: "../../images/video-three.jpg",
+    imageSrc: "/images/video-three.jpg",
     alt: "Banner do vídeo 3",
   },
   {
     id: 4,
     title: "Matriz Energética",
     description: "Produção própria de energia limpa, renovável e acessível",
-    imageSrc: "../../images/video-four.png",
+    imageSrc: "/images/video-four.png",
     alt: "Banner do vídeo 4",
   },
   {
     id: 5,
     title: "Urbanismo Social",
     description: "Desenvolver a comunidade e as pessoas com equidade",
-    imageSrc: "../../images/video-five.jpg",
+    imageSrc: "/images/video-five.jpg",
     alt: "Banner do vídeo 5",
   },
 ]);
