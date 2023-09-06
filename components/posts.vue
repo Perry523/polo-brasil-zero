@@ -27,9 +27,6 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
-const esgRef = ref(null);
-
 // Você pode descomentar o array abaixo se decidir usar a parte de posts
 // const posts = ref([
 //   {

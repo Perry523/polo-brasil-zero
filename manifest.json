@@ -1,0 +1,28 @@
+{
+  "name": "Polo Brasil",
+  "short_name": "Polo brasil",
+  "description": "Site do polo Brasil",
+  "lang": "pt-BR",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/images/logo-green.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "id": "/?source=pwa",
+  "start_url": "/?source=pwa",
+  "display": "standalone",
+  "scope": "/",
+  "shortcuts": [
+    {
+      "name": "Polo Brasil",
+      "short_name": "Polo Brasil",
+      "description": "Polo Brasil",
+      "url": "/",
+      "icons": [{ "src": "/images/logo-green.png", "sizes": "192x192" }]
+    }
+  ]
+}

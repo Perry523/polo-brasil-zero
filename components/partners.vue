@@ -61,8 +61,6 @@ const partners = ref([
     alt: "Imagem de um parceiro estratégico",
   },
 ]);
-
-const partinersRef = ref(null);
 </script>
 
 <style scoped>

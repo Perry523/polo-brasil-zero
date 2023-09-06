@@ -13,7 +13,7 @@
 </template>
 
 <script setup>
-import { Carousel, Navigation, Pagination, Slide } from "vue3-carousel";
+import { Carousel, Pagination, Slide } from "vue3-carousel";
 import "vue3-carousel/dist/carousel.css";
 const slides = [
   "/images/video-one.jpg",

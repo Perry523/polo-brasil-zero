@@ -76,7 +76,6 @@
 
 <script setup>
 import { ref } from "vue";
-const contactRef = ref(null);
 const contactTypeSelectedOption = ref(-1);
 
 const handleSelectOption = (i) => {

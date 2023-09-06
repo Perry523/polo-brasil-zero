@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+// import { VitePWA } from "vite-plugin-pwa";
 export default defineNuxtConfig({
   modules: [
     "@nuxtjs/tailwindcss",
@@ -6,6 +7,7 @@ export default defineNuxtConfig({
     "@nuxt/image-edge",
     "@pinia/nuxt",
     "@pinia-plugin-persistedstate/nuxt",
+    // "vite-plugin-pwa"
     "@vite-pwa/nuxt"
   ],
   typescript: {
@@ -26,6 +28,19 @@ export default defineNuxtConfig({
   },
   ssr: false,
   pwa: {
+    devOptions: {
+      navigateFallback: "/",
+      enabled: true
+    },
+    workbox: {
+      clientsClaim: true,
+      skipWaiting: true
+      // swSrc: "sw.js",
+      // swDest: "sw.js",
+      // globPatterns: ["**/*.{js,css,html}"],
+      // globDirectory: ".",
+      // enable on dev
+    },
     manifest: {
       name: "Polo Brasil",
       short_name: "Polo brasil",
@@ -65,6 +80,48 @@ export default defineNuxtConfig({
       //     sizes: "720x540",
       //   }
       // ]
+    }
+  },
+  routeRules: {
+    // Static generation
+    "/": { prerender: true },
+    "/settings/**": { prerender: false },
+    // incremental regeneration
+    "/api/list-servers": { swr: true },
+    // CDN cache rules
+    "/manifest.webmanifest": {
+      headers: {
+        "Content-Type": "application/manifest+json",
+        "Cache-Control": "public, max-age=0, must-revalidate"
+      }
+    }
+  },
+  app: {
+    keepalive: true,
+    head: {
+      viewport: "width=device-width,initial-scale=1,viewport-fit=cover",
+      bodyAttrs: {
+        class: "overflow-x-hidden"
+      },
+      link: [
+        { rel: "icon", href: "/images/logo-green.svg", sizes: "any" },
+        { rel: "icon", type: "image/svg+xml", href: "/images/logo-green.svg" },
+        { rel: "apple-touch-icon", href: "/images/logo-green.svg" }
+      ],
+      meta: [
+        {
+          name: "apple-mobile-web-app-status-bar-style",
+          content: "black-translucent"
+        },
+        // open graph social image
+        { property: "og:title", content: "Polo Brasil" },
+        { property: "og:description", content: "Polo Brasil" },
+        { property: "og:type", content: "website" },
+        { property: "og:image", content: "/images/logo-green.svg" },
+        { property: "og:image:width", content: "3800" },
+        { property: "og:image:height", content: "1900" },
+        { property: "og:site_name", content: "Polo Brasil" }
+      ]
     }
   }
 });

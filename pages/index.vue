@@ -32,19 +32,11 @@
 
 <script setup>
 import { ref } from "vue";
-const ourGroundRef = ref(null);
-const aboutUsRef = ref(null);
-const sustentabilityRef = ref(null);
-const netzeroRef = ref(null);
-const partnersRef = ref(null);
-const esgRef = ref(null);
-const contactRef = ref(null);
-
-const activedSlide = ref(0);
+const { $pwa } = useNuxtApp();
+console.log($pwa.showInstallPrompt);
 const isVideoOpen = ref(false);
 const selectedVideoShow = ref("");
 function goToAnchor(anchor) {
-  console.log(`Rolando para ${anchor}`);
   const ref = document.getElementById(anchor);
   ref?.scrollIntoView({
     behavior: "smooth",
@@ -57,7 +49,6 @@ const whatsappUrl =
 
 onMounted(() => {
   const videoIds = ["myVideo1", "myVideo2", "myVideo3", "myVideo4", "myVideo5"];
-
   videoIds.forEach((id) => {
     const videoElement = document.getElementById(id);
     if (videoElement) {

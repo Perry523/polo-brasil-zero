@@ -57,11 +57,7 @@
   </section>
 </template>
 
-<script setup>
-import { ref } from "vue";
-
-const netzeroRef = ref(null);
-</script>
+<script setup></script>
 
 <style scoped>
 /* seus estilos aqui */
