@@ -3,17 +3,17 @@
     <div class="flex items-center max-lg:flex-col wrapper-full">
       <div class="flex flex-col max-lg:flex">
         <h2 class="text-white max-lg:text-center">
-          E você? Quer fazer parte do nosso projeto sustentável? Entre em
+          E você, quer fazer parte do nosso projeto sustentável? Entre em
           contato
         </h2>
         <div class="mt-16 p-3 border-white rounded-md border lg:w-[330px]">
-          <!-- <img alt="Ícone de email" src="/images/mail.svg" class="mr-2" /> -->
+          <!-- <nuxt-img alt="Ícone de email" src="/images/mail.svg" class="mr-2" /> -->
           <span class="text-white">lhmt@polobrasilzero.com</span>
         </div>
         <div
           class="mt-4 p-3 border-white rounded-md border lg:w-[330px] flex items-center"
         >
-          <!-- <img
+          <!-- <nuxt-img
             alt="Ícone de endereço"
             src="/images/map.svg"
             class="mr-4 shrink-0 h-[21px]"
@@ -62,7 +62,7 @@
           type="button"
           class="bt bt-primary mx-auto mt-5 flex items-center justify-center"
         >
-          <img
+          <nuxt-img
             alt="Ícone de enviar mensagem"
             src="/images/send.svg"
             class="bt-icon mr-3"

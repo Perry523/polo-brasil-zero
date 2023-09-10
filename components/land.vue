@@ -18,13 +18,13 @@
         @click="emit('open', 'FuCpCoSmRBg')"
       >
         <p class="text-green-800 font-bold">Planta dos Lotes de Venda</p>
-        <img
+        <nuxt-img
           src="/images/pbz-render-video-banner.webp"
           alt="Vídeo ilustrativo renderizado do Polo Brasil Zero"
           class="rounded-3xl !w-full border border-green-500 mt-2"
         />
         <a
-          class="border-4 border-white mx-auto top-36 absolute z-[60] rounded-full flex justify-center items-center w-20 h-20"
+          class="border-4 border-white mx-auto w-16 lg:w-20 h-16 lg:h-20 top-[43%] lg:top-36 absolute z-[60] rounded-full flex justify-center items-center"
         >
           <nuxt-img
             src="/images/play-outline.svg"
@@ -35,12 +35,12 @@
       </div>
     </div>
     <div class="wrapper-full">
-      <img
+      <nuxt-img
         src="/images/ground.svg"
         alt="Planta do parque industrial"
         class="mx-auto block w-fit mt-16 max-lg:!hidden"
       />
-      <img
+      <nuxt-img
         src="/images/map-responsive.png"
         alt="Planta do parque industrial"
         class="mx-auto block w-full mt-16 lg:!hidden"
@@ -50,7 +50,11 @@
         class="bt bt-outline-primary mx-auto mt-9 flex justify-center items-center max-lg:w-full"
         @click="emit('anchor', 'contactRef')"
       >
-        <img src="/images/download.svg" alt="Ícone de baixar" class="bt-icon" />
+        <nuxt-img
+          src="/images/download.svg"
+          alt="Ícone de baixar"
+          class="bt-icon"
+        />
         <span class="ml-3 text-green-700 font-bold text-lg">Baixar e-book</span>
       </button>
     </div>

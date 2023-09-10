@@ -8,13 +8,18 @@
     </h2>
     <div class="flex justify-between w-full max-lg:flex-col items-center">
       <a
-        v-for="partner in partners"
+        v-for="(partner, i) in partners"
         :key="partner.id"
         :href="partner.url"
         target="_blank"
-        class="max-lg:mt-10"
+        class="max-lg:mt-10 w-full lg:w-auto"
       >
-        <nuxt-img :src="partner.imageSrc" :alt="partner.alt" />
+        <nuxt-img
+          :src="partner.imageSrc"
+          :alt="partner.alt"
+          class="h-28 mx-auto"
+          :class="i === 3 ? 'w-32' : 'w-56 '"
+        />
       </a>
     </div>
   </div>

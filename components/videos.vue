@@ -13,7 +13,7 @@
         >
           <source :src="videoSrc" type="video/mp4" />
         </video>
-        <div className="h-[540px] w-[calc(100vw)] z-20">
+        <div className="h-[540px] bg-gradient-green w-[calc(100vw)] z-20">
           <div className="wrapper-full ">
             <h1 className="text-green-100 pt-40 lg:w-[400px] text-left">
               {{ title }}
@@ -29,7 +29,7 @@
               <nuxt-img
                 alt="Ícone de baixar"
                 src="/images/play-circle.png"
-                className="bt-icon mr-3"
+                className="bt-icon mr-3 w-6  h-6 "
               />
               Conheça o projeto
             </button>

@@ -25,7 +25,7 @@
           type="button"
           className="bt bt-primary shrink-0 lg:ml-3 max-lg:mt-3 max-lg:w-full flex justify-center items-center"
         >
-          <img
+          <nuxt-img
             alt="Ícone de enviar mensagem"
             src="/images/send.svg"
             className="bt-icon mr-3"

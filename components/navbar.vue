@@ -7,18 +7,19 @@
   >
     <div class="wrapper-full flex justify-between items-center">
       <a href="#" class="shrink-0 w-[250px]">
-        <!-- Substituir por uma tag <img> ou componente de imagem -->
-        <img
+        <!-- Substituir por uma tag <nuxt-img> ou componente de imagem -->
+        <nuxt-img
           src="/images/logo-white.svg"
           alt="Logo da empresa Polo Brasil Zero"
+          class="w-32 lg:w-40"
         />
       </a>
       <a href="#" @click="toggleMenu">
-        <!-- Substituir por uma tag <img> ou componente de imagem -->
-        <img
+        <!-- Substituir por uma tag <nuxt-img> ou componente de imagem -->
+        <nuxt-img
           src="/images/menu-hamburger.svg"
           alt="Menu hamburger"
-          class="2xl:!hidden cursor-pointer"
+          class="2xl:!hidden cursor-pointer w-9"
         />
       </a>
       <div
@@ -29,7 +30,7 @@
       <ul :class="['nav-menu', { 'nav-menu-open': isMenuOpen }]">
         <li class="absolute left-3 top-3 !mt-0">
           <a href="#" @click="toggleMenu">
-            <!-- Substituir por uma tag <img> ou componente de imagem -->
+            <!-- Substituir por uma tag <nuxt-img> ou componente de imagem -->
             <XMarkIcon
               src="@/assets/close.svg"
               alt="Fechar menu hamburger"
@@ -46,8 +47,8 @@
             type="button"
             class="bt bt-primary shrink-0 flex"
           >
-            <!-- Substituir por uma tag <img> ou componente de imagem -->
-            <img
+            <!-- Substituir por uma tag <nuxt-img> ou componente de imagem -->
+            <nuxt-img
               src="/images/send.svg"
               alt="Ícone de baixar"
               class="bt-icon mr-3"

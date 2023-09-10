@@ -30,7 +30,7 @@
             class="bt bt-primary mt-10 flex justify-center items-center max-lg:w-full"
             @click="emit('anchor', 'contactRef')"
           >
-            <img
+            <nuxt-img
               alt="Ícone de baixar"
               src="/images/send.svg"
               class="bt-icon mr-3"

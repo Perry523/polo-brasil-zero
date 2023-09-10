@@ -40,7 +40,7 @@
           layout="fullWidth"
         />
         <a
-          class="border-4 border-white mx-auto top-36 absolute z-[60] rounded-full flex justify-center items-center w-20 h-20"
+          class="border-4 border-white mx-auto w-16 lg:w-20 h-16 lg:h-20 top-[43%] lg:top-36 absolute z-[60] rounded-full flex justify-center items-center"
         >
           <nuxt-img
             src="/images/play-outline.svg"
@@ -52,7 +52,7 @@
     </div>
 
     <div className="flex wrapper-full lg:mt-24 items-center max-lg:flex-col">
-      <img
+      <nuxt-img
         alt="Imagem que mostra o plano ESG. (ambiental, social, governança, econômico, tecnológico)"
         src="/images/esg.png"
         className="shrink-0 max-lg:mt-12 w-[300px]"
@@ -82,14 +82,14 @@
         <p className="text-green-800 font-bold mb-2 lg:mb-0">
           Chamado para Sustentabilidade
         </p>
-        <img
+        <nuxt-img
           className="rounded-3xl !w-full border border-green-500 mt-2"
           alt="Vídeo ilustrativo renderizado do Polo Brasil Zero"
           src="/images/pbz-render-video-banner-3.jpg"
           layout="fullWidth"
         />
         <a
-          class="border-4 border-white mx-auto top-36 absolute z-[60] rounded-full flex justify-center items-center w-20 h-20"
+          class="border-4 border-white mx-auto w-16 lg:w-20 h-16 lg:h-20 top-[43%] lg:top-36 absolute z-[60] rounded-full flex justify-center items-center"
         >
           <nuxt-img
             src="/images/play-outline.svg"
@@ -111,7 +111,7 @@
           podem revolucionar o futuro da indústria, das pessoas e do planeta.
         </p>
       </div>
-      <img
+      <nuxt-img
         alt="Lista de todas as ODS's da ONU"
         src="/images/odss.png"
         className="shrink-0 lg:ml-20 max-lg:mt-12 w-full lg:w-[531px]"
@@ -120,9 +120,9 @@
       />
     </div>
   </section>
-  <section class="bg-green-700 w-full lg:h-[362px] xl:h-[420px]">
+  <section class="bg-gray-200 w-full lg:h-[362px] xl:h-[420px]">
     <div
-      class="bg-green-800 h-full wrapper-full flex !px-0 max-lg:flex-col lg:justify-center"
+      class="h-full wrapper-full !px-0 flex max-lg:flex-col lg:justify-center"
     >
       <div
         v-for="video in videos"
@@ -133,20 +133,20 @@
           class="bg-green-400 w-full h-full z-50 absolute top-0 left-0 mix-blend-multiply card-mask"
         ></div>
         <div
-          class="from-black bg-gradient-to-t w-full h-2/5 absolute z-50 bottom-0"
+          class="from-black bg-gradient-green w-full h-2/5 absolute z-50 bottom-0"
         ></div>
-        <img
+        <nuxt-img
           :src="video.imageSrc"
-          class="shrink-0 card-banner w-full max-lg:h-80 object-left-top"
+          class="shrink-0 card-banner w-full max-lg:h-72 object-left-top"
           :alt="video.alt"
         />
         <a
-          class="border-4 border-white mx-auto top-32 absolute z-[60] rounded-full flex justify-center items-center w-20 h-20"
+          class="border-4 border-white mx-auto w-16 lg:w-20 h-16 lg:h-20 top-[35%] lg:top-36 absolute z-[90] rounded-full flex justify-center items-center"
         >
           <nuxt-img
             src="/images/play-outline.svg"
             alt="Clique aqui para dar play"
-            class="w-6 ml-2 !absolute"
+            class="w-6 ml-2"
           />
         </a>
         <div class="flex flex-col absolute w-10/12 bottom-4 z-[60]">

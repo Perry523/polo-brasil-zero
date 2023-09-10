@@ -12,7 +12,7 @@
             :key="post.id"
             class="w-[250px] cursor-pointer"
           >
-            <img
+            <nuxt-img
               :src="post.imageSrc"
               :alt="post.alt"
               class="rounded-2xl"

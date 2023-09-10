@@ -37,6 +37,7 @@
   "dependencies": {
     "@heroicons/vue": "^2.0.18",
     "@vue-hero-icons/solid": "^1.7.2",
+    "@vue-hero-icons/outline": "^1.7.2",
     "axios": "^1.3.6",
     "dayjs": "^1.11.7",
     "maska": "^2.1.9",

@@ -28,7 +28,7 @@
         <div
           class="mt-3 space-x-4 flex items-center max-lg:justify-center lg:justify-start"
         >
-          <img
+          <nuxt-img
             v-for="(image, index) in socialImages"
             :key="index"
             :src="image"

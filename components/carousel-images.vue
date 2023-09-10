@@ -8,41 +8,79 @@
         />
       </div>
     </Slide>
+    <!-- manually creates prev and next button -->
 
     <template #addons="{}">
-      <Carousel
-        id="inner-carousel"
-        class="mt-3"
-        :items-to-show="3"
-        :wrap-around="true"
-      >
-        <Slide v-for="(slide, n) in 40" :key="slide">
-          <div class="mx-2">
-            <nuxt-img
-              :class="
-                slide == currentSlide + 1 ? 'border-[6px] border-green-700' : ''
-              "
-              class="rounded-2xl"
-              :src="`/carousel-images/${n + 1}.jpg`"
-              @click="goToSlide(n)"
+      <div>
+        <div
+          class="flex justify-between items-center absolute top-[30%] w-full px-1"
+        >
+          <button
+            class=""
+            @click="handleBack"
+            :disabled="myCarousel?.isFirstSlide"
+          >
+            <ArrowLeftCircleIcon
+              class="w-12 lg:w-16 h-12 lg:h-16 stroke-white"
             />
-          </div>
-        </Slide>
-        <template #addons>
-          <Navigation />
-        </template>
-      </Carousel>
+          </button>
+          <button
+            class=""
+            @click="handleNext"
+            :disabled="myCarousel?.isLastSlide"
+          >
+            <ArrowRightCircleIcon
+              class="w-12 lg:w-16 h-12 lg:h-16 stroke-white"
+            />
+          </button>
+        </div>
+        <Carousel
+          id="inner-carousel"
+          ref="innerCarousel"
+          class="mt-3"
+          :items-to-show="3"
+          :wrap-around="true"
+        >
+          <Slide v-for="(slide, n) in 40" :key="slide">
+            <div class="mx-2">
+              <nuxt-img
+                :class="
+                  slide == currentSlide + 1
+                    ? 'border-[6px] border-green-700'
+                    : ''
+                "
+                class="rounded-2xl"
+                :src="`/carousel-images/${n + 1}.jpg`"
+                @click="goToSlide(n)"
+              />
+            </div>
+          </Slide>
+        </Carousel>
+      </div>
     </template>
   </Carousel>
 </template>
 
 <script setup>
 import { Carousel, Navigation, Slide } from "vue3-carousel";
+import {
+  ArrowRightCircleIcon,
+  ArrowLeftCircleIcon,
+} from "@heroicons/vue/24/outline";
 import "vue3-carousel/dist/carousel.css";
 const currentSlide = ref(0);
+const innerCarousel = ref(null);
 const myCarousel = ref(null);
 function goToSlide(slide) {
   myCarousel.value.slideTo(slide);
+}
+function handleNext() {
+  innerCarousel.value.next();
+  myCarousel.value.next();
+}
+function handleBack() {
+  innerCarousel.value.prev();
+  myCarousel.value.prev();
 }
 </script>
 
