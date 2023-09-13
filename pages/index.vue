@@ -66,15 +66,6 @@ const handleOpenVideo = (link) => {
   selectedVideoShow.value = link;
   isVideoOpen.value = true;
 };
-
-useSeoMeta({
-  title: "Polo Brasil Zero - Distrito Industrial 100% sustentável.",
-  ogTitle: "Polo Brasil Zero - Distrito Industrial 100% sustentável.",
-  description: "Site do Polo Brasil Zero",
-  ogDescription: "Site do Polo Brasil Zero",
-  ogImage: "images/pbz-render-video-banner-2.webp",
-  // twitterCard: "summary_large_image",
-});
 </script>
 
 <style scoped>
