@@ -1,5 +1,5 @@
 <template>
-  <Carousel id="carousel">
+  <Carousel id="carousel" ref="carousel">
     <Slide
       v-for="{ title, description, videoSrc } in slidesData"
       :key="videoSrc"
@@ -81,6 +81,13 @@ const slidesData = [
   },
 ];
 const emit = defineEmits(["open"]);
+const carousel = ref(null);
+const currentImage = ref(0);
+onMounted(() => {
+  setInterval(() => {
+    carousel.value.next();
+  }, 5000);
+});
 </script>
 
 <style lang="scss">

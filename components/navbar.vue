@@ -6,7 +6,7 @@
     ]"
   >
     <div class="wrapper-full flex justify-between items-center">
-      <a href="#" class="shrink-0 w-[250px]">
+      <a href="#" class="shrink-0 sm:w-[250px]">
         <!-- Substituir por uma tag <nuxt-img> ou componente de imagem -->
         <nuxt-img
           src="/images/logo-white.svg"
@@ -14,7 +14,7 @@
           class="w-32 lg:w-40"
         />
       </a>
-      <a href="#" @click="toggleMenu">
+      <a class="w-9" href="#" @click="toggleMenu">
         <!-- Substituir por uma tag <nuxt-img> ou componente de imagem -->
         <nuxt-img
           src="/images/menu-hamburger.svg"
@@ -51,7 +51,7 @@
             <nuxt-img
               src="/images/send.svg"
               alt="Ícone de baixar"
-              class="bt-icon mr-3"
+              class="bt-icon mr-3 w-6"
             />
             Entrar em contato
           </button>
@@ -88,6 +88,7 @@ const handleGoToAnchor = (ref) => {
     window.location.href = "/";
     return;
   }
+  isMenuOpen.value = false;
   emit("goToAnchor", ref);
 };
 const emit = defineEmits(["goToAnchor"]);

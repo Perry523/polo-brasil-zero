@@ -17,7 +17,7 @@
         class="lg:w-[450px] lg:h-[340px] shrink-0 relative flex justify-center items-center cursor-pointer max-lg:mt-5 max-lg:w-full max-lg:ml-0 flex-col ml-20"
         @click="emit('open', 'FuCpCoSmRBg')"
       >
-        <p class="text-green-800 font-bold">Planta dos Lotes de Venda</p>
+        <p class="text-green-800 font-bold">Planta de venda dos lotes</p>
         <nuxt-img
           src="/images/pbz-render-video-banner.webp"
           alt="Vídeo ilustrativo renderizado do Polo Brasil Zero"

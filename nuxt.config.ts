@@ -42,8 +42,8 @@ export default defineNuxtConfig({
       // enable on dev
     },
     manifest: {
-      name: "Polo Brasil",
-      short_name: "Polo brasil",
+      name: "Polo Brasil Zero",
+      short_name: "Site do polo Brasil",
       description: "Site do polo Brasil",
       lang: "pt-BR",
       theme_color: "#ffffff",
@@ -114,13 +114,28 @@ export default defineNuxtConfig({
           content: "black-translucent"
         },
         // open graph social image
-        { property: "og:title", content: "Polo Brasil" },
-        { property: "og:description", content: "Polo Brasil" },
+        {
+          property: "og:title",
+          content: "Centro sustentável Polo Brasil Zero"
+        },
+        // {
+        //   property: "og:site_name",
+        //   content:
+        //     "Parque idustrial carbono neutro - Economia circular - Hub tecnológico"
+        // },
+        {
+          property: "og:description",
+          content:
+            "Parque idustrial carbono neutro - Economia circular - Hub tecnológico"
+        },
         { property: "og:type", content: "website" },
-        { property: "og:image", content: "/images/logo-green.svg" },
+        {
+          property: "og:image",
+          content:
+            "https://drive.google.com/file/d/1UyBLyk_ow7nqnb3Z37ajyWm3Wk31HDxm/view"
+        },
         { property: "og:image:width", content: "3800" },
-        { property: "og:image:height", content: "1900" },
-        { property: "og:site_name", content: "Polo Brasil" }
+        { property: "og:image:height", content: "1900" }
       ]
     }
   }

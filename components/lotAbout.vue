@@ -14,9 +14,7 @@
           class="lg:flex flex-col items-center m-auto max-lg:mt-12 text-center"
         >
           <h2 class="text-green-700">Pré lançamento de vendas</h2>
-          <h3 class="mt-2 text-green-700 font-semibold">
-            Investimento em Real Estate
-          </h3>
+          <h3 class="mt-2 text-green-700 font-semibold">Fase 1</h3>
           <p class="mt-5 text-green-800 lg:w-80">
             Todos os lotes são carbono neutro já equipados com tubulações
             centrais de abastecimento e tratamento de água, rede de coleta dos
@@ -33,7 +31,7 @@
             <nuxt-img
               alt="Ícone de baixar"
               src="/images/send.svg"
-              class="bt-icon mr-3"
+              class="bt-icon mr-3 w-6"
             />
             Entrar em contato
           </button>

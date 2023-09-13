@@ -20,18 +20,14 @@
             @click="handleBack"
             :disabled="myCarousel?.isFirstSlide"
           >
-            <ArrowLeftCircleIcon
-              class="w-12 lg:w-16 h-12 lg:h-16 stroke-white"
-            />
+            <ChevronLeftIcon class="w-12 lg:w-16 h-12 lg:h-16 stroke-white" />
           </button>
           <button
             class=""
             @click="handleNext"
             :disabled="myCarousel?.isLastSlide"
           >
-            <ArrowRightCircleIcon
-              class="w-12 lg:w-16 h-12 lg:h-16 stroke-white"
-            />
+            <ChevronRightIcon class="w-12 lg:w-16 h-12 lg:h-16 stroke-white" />
           </button>
         </div>
         <Carousel
@@ -63,10 +59,8 @@
 
 <script setup>
 import { Carousel, Navigation, Slide } from "vue3-carousel";
-import {
-  ArrowRightCircleIcon,
-  ArrowLeftCircleIcon,
-} from "@heroicons/vue/24/outline";
+
+import { ChevronRightIcon, ChevronLeftIcon } from "@heroicons/vue/24/outline";
 import "vue3-carousel/dist/carousel.css";
 const currentSlide = ref(0);
 const innerCarousel = ref(null);
@@ -82,6 +76,7 @@ function handleBack() {
   innerCarousel.value.prev();
   myCarousel.value.prev();
 }
+// run carousel every 5s
 </script>
 
 <style lang="scss">

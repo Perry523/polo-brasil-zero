@@ -31,7 +31,7 @@
         @click="emit('open', 'b6SDcbE3y98')"
       >
         <p className="text-green-800 font-bold mb-2 lg:mb-0">
-          Apresentação do Projeto Total
+          Apresentação do Master Plan
         </p>
         <nuxt-img
           className="rounded-3xl w-full border border-green-500 mt-2"
@@ -52,10 +52,13 @@
     </div>
 
     <div className="flex wrapper-full lg:mt-24 items-center max-lg:flex-col">
+      <div className="text-green-800 font-bold max-lg:mt-12">
+        Modelo sustentavel de negócio
+      </div>
       <nuxt-img
         alt="Imagem que mostra o plano ESG. (ambiental, social, governança, econômico, tecnológico)"
         src="/images/esg.png"
-        className="shrink-0 max-lg:mt-12 w-[300px]"
+        className="shrink-0  w-[300px]"
       />
       <div className="lg:ml-10 max-lg:text-center">
         <h3 className="text-green-800 max-lg:mt-10">Visão de Liderança</h3>
@@ -137,10 +140,10 @@
         ></div>
         <nuxt-img
           :src="video.imageSrc"
-          class="shrink-0 card-banner w-full max-lg:h-72 object-left-top"
+          class="shrink-0 card-banner w-full max-lg:h-56 object-left-top"
           :alt="video.alt"
         />
-        <a
+        <!-- <a
           class="border-4 border-white mx-auto w-16 lg:w-20 h-16 lg:h-20 top-[35%] lg:top-36 absolute z-[90] rounded-full flex justify-center items-center"
         >
           <nuxt-img
@@ -148,7 +151,7 @@
             alt="Clique aqui para dar play"
             class="w-6 ml-2"
           />
-        </a>
+        </a> -->
         <div class="flex flex-col absolute w-10/12 bottom-4 z-[60]">
           <h3 class="text-white w-10/12 text-2xl font-bold mb-2">
             {{ video.title }}
