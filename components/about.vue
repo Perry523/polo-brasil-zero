@@ -140,7 +140,7 @@
         ></div>
         <nuxt-img
           :src="video.imageSrc"
-          class="shrink-0 card-banner w-full max-lg:h-56 object-left-top"
+          class="shrink-0 card-banner w-full max-lg:h-64 object-left-top"
           :alt="video.alt"
         />
         <!-- <a
@@ -152,7 +152,7 @@
             class="w-6 ml-2"
           />
         </a> -->
-        <div class="flex flex-col absolute w-10/12 bottom-4 z-[60]">
+        <div class="flex flex-col absolute w-10/12 bottom-2 z-[60]">
           <h3 class="text-white w-10/12 text-2xl font-bold mb-2">
             {{ video.title }}
           </h3>

@@ -1,10 +1,16 @@
 <template>
-  <Carousel id="carousel" ref="carousel">
+  <Carousel v-model="currentImage" id="carousel" ref="carousel">
     <Slide
       v-for="{ title, description, videoSrc } in slidesData"
       :key="videoSrc"
     >
-      <div class="carousel__item">
+      <div
+        @mouseenter="disableSlide"
+        @mouseleave="enableSlide"
+        @touchstart="disableSlide"
+        @touchend="enableSlide"
+        class="carousel__item"
+      >
         <video
           autoPlay
           muted
@@ -84,11 +90,33 @@ const slidesData = [
 const emit = defineEmits(["open"]);
 const carousel = ref(null);
 const currentImage = ref(0);
-onMounted(() => {
-  setInterval(() => {
-    carousel.value.next();
+var interval = setInterval(() => {
+  if (currentImage.value < slidesData.length - 1) {
+    carousel.value?.next();
+  } else {
+    carousel.value?.slideTo(0);
+  }
+}, 5000);
+watch(
+  () => currentImage.value,
+  (value) => {
+    console.log(value);
+  }
+);
+const disableSlide = () => {
+  clearInterval(interval);
+  // carousel.value.stop();
+};
+const enableSlide = () => {
+  interval = setInterval(() => {
+    if (currentImage.value < slidesData.length - 1) {
+      carousel.value.next();
+    } else {
+      carousel.value.slideTo(0);
+    }
   }, 5000);
-});
+  interval;
+};
 </script>
 
 <style lang="scss">

@@ -35,11 +35,6 @@ export default defineNuxtConfig({
     workbox: {
       clientsClaim: true,
       skipWaiting: true
-      // swSrc: "sw.js",
-      // swDest: "sw.js",
-      // globPatterns: ["**/*.{js,css,html}"],
-      // globDirectory: ".",
-      // enable on dev
     },
     manifest: {
       name: "Polo Brasil Zero",
@@ -68,27 +63,12 @@ export default defineNuxtConfig({
           icons: [{ src: "/images/logo-green.png", sizes: "192x192" }]
         }
       ]
-      // screenshots: [
-      //   {
-      //     src: "/images/screenshot1.png",
-      //     type: "image/png",
-      //     sizes: "540x720",
-      //   },
-      //   {
-      //     src: "/images/screenshot2.jpg",
-      //     type: "image/jpg",
-      //     sizes: "720x540",
-      //   }
-      // ]
     }
   },
   routeRules: {
-    // Static generation
     "/": { prerender: true },
     "/settings/**": { prerender: false },
-    // incremental regeneration
     "/api/list-servers": { swr: true },
-    // CDN cache rules
     "/manifest.webmanifest": {
       headers: {
         "Content-Type": "application/manifest+json",
@@ -118,11 +98,6 @@ export default defineNuxtConfig({
           property: "og:title",
           content: "Centro sustentável Polo Brasil Zero"
         },
-        // {
-        //   property: "og:site_name",
-        //   content:
-        //     "Parque idustrial carbono neutro - Economia circular - Hub tecnológico"
-        // },
         {
           property: "og:description",
           content:
@@ -131,11 +106,10 @@ export default defineNuxtConfig({
         { property: "og:type", content: "website" },
         {
           property: "og:image",
-          content:
-            "https://drive.google.com/file/d/1UyBLyk_ow7nqnb3Z37ajyWm3Wk31HDxm/view"
+          content: "https://www.polobrasilzero.com/carousel-images/20.jpg"
         },
-        { property: "og:image:width", content: "3800" },
-        { property: "og:image:height", content: "1900" }
+        { property: "og:image:width", content: "1200" },
+        { property: "og:image:height", content: "630" }
       ]
     }
   }
