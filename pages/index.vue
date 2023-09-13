@@ -31,6 +31,7 @@
 </template>
 
 <script setup>
+import "animate.css";
 import { ref } from "vue";
 const { $pwa } = useNuxtApp();
 console.log($pwa.showInstallPrompt);
@@ -55,6 +56,7 @@ onMounted(() => {
       videoElement.play();
     }
   });
+  window.addEventListener("scroll", handleScroll);
 });
 
 const handleCloseVideoClick = () => {
@@ -66,6 +68,19 @@ const handleOpenVideo = (link) => {
   selectedVideoShow.value = link;
   isVideoOpen.value = true;
 };
+
+function handleScroll() {
+  const aboutSection = document.getElementById("about");
+  const rect = aboutSection.getBoundingClientRect();
+  console.log(rect);
+  if (rect.top <= 400) {
+    const targetDiv = document.getElementById("bg-white");
+    if (!targetDiv.classList.contains("animate__backInUp")) {
+      targetDiv.classList.remove("hidden");
+      targetDiv.classList.add("animate__animated", "animate__backInUp", "grid");
+    }
+  }
+}
 </script>
 
 <style scoped>

@@ -1,10 +1,11 @@
 <template>
   <section
     id="about"
-    class="bg-colorful lg:py-8 py-4 wrapper-full bg-no-repeat bg-center bg-cover"
+    class="bg-colorful lg:py-8 py-4 wrapper-full bg-no-repeat bg-center bg-cover min-h-[500px]"
   >
     <div
-      class="grid grid-cols-12 lg:flex-row justify-between max-lg:p-2 bg-white rounded-3xl lg:!p-7 items-center w-full lg:ml-0"
+      id="bg-white"
+      class="hidden grid-cols-12 lg:flex-row justify-between max-lg:p-2 bg-white rounded-3xl lg:!p-7 items-center w-full lg:ml-0"
     >
       <div class="col-span-12 lg:col-span-7">
         <carousel-images />
