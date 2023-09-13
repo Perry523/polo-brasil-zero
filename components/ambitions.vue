@@ -3,13 +3,14 @@
     <div class="wrapper-full flex flex-col items-center">
       <div class="flex items-center max-lg:flex-col">
         <div class="flex flex-col max-lg:text-center">
-          <h2 class="lg:w-80 xl:w-auto text-green-800 max-lg:text-center mb-5">
-            Net-Zero <br />
-            <h3 class="text-green-800">Ambição 2024</h3>
-          </h2>
+         
           <p
             className="mt-2 max-lg:text-center xl:pr-28 2xl:pr-60 text-green-800"
           >
+          <h2 class="lg:w-80 xl:w-auto text-green-800 text-center mb-5">
+            Net-Zero <br />
+            <h3 class="text-green-800">Ambição 2024</h3>
+          </h2>
             A transição para um futuro sustentável exige que as indústrias e
             instituições assumam um compromisso firme em alcançar a neutralidade
             de carbono, conhecida como Net Zero. Essa meta é fundamental para

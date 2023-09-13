@@ -15,9 +15,10 @@
         </video>
         <div className="h-[540px] bg-gradient-green w-[calc(100vw)] z-20">
           <div className="wrapper-full ">
-            <h1 className="text-green-100 pt-40 lg:w-[400px] text-left">
-              {{ title }}
-            </h1>
+            <h1
+              v-html="title"
+              className="text-green-100 pt-40 lg:w-[400px] text-left"
+            ></h1>
             <p className="text-green-100 mt-2 lg:w-[580px] text-left">
               {{ description }}
             </p>
@@ -50,7 +51,7 @@ import { Carousel, Pagination, Slide } from "vue3-carousel";
 import "vue3-carousel/dist/carousel.css";
 const slidesData = [
   {
-    title: "Centro Sustentável",
+    title: "Centro Sustentável <br /> Polo Brasil Zero",
     description:
       "Uma iniciativa privada, onde a inovação se encontra com a responsabilidade socioambiental, alinhado com os objetivos de desenvolvimento sustentável da ONU.",
     videoSrc: "/img/first-slidee.mp4",

@@ -52,7 +52,7 @@
     </div>
 
     <div className="flex wrapper-full lg:mt-24 items-center max-lg:flex-col">
-      <div className="text-green-800 font-bold max-lg:mt-12">
+      <div className="text-green-800 font-bold mt-12 lg:mt-32">
         Modelo sustentavel de negócio
       </div>
       <nuxt-img
