@@ -93,7 +93,6 @@ export default defineNuxtConfig({
           name: "apple-mobile-web-app-status-bar-style",
           content: "black-translucent"
         },
-        // open graph social image
         {
           property: "og:title",
           content: "Centro sustentável Polo Brasil Zero"
@@ -107,9 +106,9 @@ export default defineNuxtConfig({
         {
           property: "og:image",
           content: "https://www.polobrasilzero.com/images/thumb.jpg"
-        }
-        // { property: "og:image:width", content: "256" },
-        // { property: "og:image:height", content: "256" }
+        },
+        { property: "og:image:width", content: "300" }, // Altere para o tamanho correto da sua imagem.
+        { property: "og:image:height", content: "300" } // Altere para o tamanho correto da sua imagem.
       ]
     }
   }
