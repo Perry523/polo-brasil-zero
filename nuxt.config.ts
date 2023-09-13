@@ -84,9 +84,9 @@ export default defineNuxtConfig({
         class: "overflow-x-hidden"
       },
       link: [
-        { rel: "icon", href: "/images/logo-green.svg", sizes: "any" },
-        { rel: "icon", type: "image/svg+xml", href: "/images/logo-green.svg" },
-        { rel: "apple-touch-icon", href: "/images/logo-green.svg" }
+        { rel: "icon", href: "/images/logo.jpeg", sizes: "any" },
+        { rel: "icon", type: "image/svg+xml", href: "/images/logo.jpeg" },
+        { rel: "apple-touch-icon", href: "/images/logo.jpeg" }
       ],
       meta: [
         {
@@ -101,15 +101,15 @@ export default defineNuxtConfig({
         {
           property: "og:description",
           content:
-            "Parque idustrial carbono neutro - Economia circular - Hub tecnológico"
+            "Parque industrial carbono neutro - Economia circular - Hub tecnológico"
         },
         { property: "og:type", content: "website" },
         {
           property: "og:image",
-          content: "https://www.polobrasilzero.com/carousel-images/20.jpg"
-        },
-        { property: "og:image:width", content: "1200" },
-        { property: "og:image:height", content: "630" }
+          content: "https://www.polobrasilzero.com/images/thumb.jpg"
+        }
+        // { property: "og:image:width", content: "256" },
+        // { property: "og:image:height", content: "256" }
       ]
     }
   }
