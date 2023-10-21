@@ -48,7 +48,7 @@
   </Carousel>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { Carousel, Pagination, Slide } from "vue3-carousel";
 const { locale } = useI18n();
 const videos = [

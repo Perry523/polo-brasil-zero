@@ -79,7 +79,7 @@
   </nav>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref, onMounted } from "vue";
 import { XMarkIcon } from "@heroicons/vue/24/solid";
 import ptBr from "@/locales/pt-BR.json";
@@ -108,7 +108,7 @@ const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
 };
 
-const handleGoToAnchor = (ref: any) => {
+const handleGoToAnchor = (ref) => {
   if (!ref) {
     // Navegar para a página inicial
     window.location.href = "/";
