@@ -13,6 +13,7 @@
     "@nuxt/devtools": "^0.5.5",
     "@nuxt/image-edge": "^1.0.0-28092818.5c21f4c",
     "@nuxtjs/eslint-module": "^4.1.0",
+    "@nuxtjs/i18n": "^8.0.0-rc.5",
     "@nuxtjs/tailwindcss": "^6.7.0",
     "@pinia-plugin-persistedstate/nuxt": "^1.1.1",
     "@pinia/nuxt": "^0.4.11",

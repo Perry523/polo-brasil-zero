@@ -5,19 +5,19 @@
     >
       <div class="flex flex-col justify-center max-lg:items-center">
         <h2 class="lg:w-80 xl:w-auto text-green-800 max-lg:text-center text">
-          Lotes sustentáveis carbono neutro
+          {{ $t("ourGround.title") }}
         </h2>
         <p class="mt-2 max-lg:text-center xl:pr-28 2xl:pr-60 text-green-800">
-          Todos os lotes já estão equipados com tubulações centrais de
-          abastecimento e tratamento de água, rede de coleta dos efluentes
-          industriais e sanitários interligados direto na ETAE.
+          {{ $t("ourGround.description") }}
         </p>
       </div>
       <div
         class="lg:w-[450px] lg:h-[340px] shrink-0 relative flex justify-center items-center cursor-pointer max-lg:mt-5 max-lg:w-full max-lg:ml-0 flex-col ml-20"
         @click="emit('open', 'FuCpCoSmRBg')"
       >
-        <p class="text-green-800 font-bold">Planta de venda dos lotes</p>
+        <p class="text-green-800 font-bold">
+          {{ $t("ourGround.plantSaleTitle") }}
+        </p>
         <nuxt-img
           src="/images/pbz-render-video-banner.webp"
           alt="Vídeo ilustrativo renderizado do Polo Brasil Zero"
@@ -55,7 +55,9 @@
           alt="Ícone de baixar"
           class="bt-icon"
         />
-        <span class="ml-3 text-green-700 font-bold text-lg">Baixar e-book</span>
+        <span class="ml-3 text-green-700 font-bold text-lg">{{
+          $t("ourGround.downloadButtonText")
+        }}</span>
       </button>
     </div>
   </section>

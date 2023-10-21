@@ -3,20 +3,15 @@
     <div className="flex wrapper-full items-center max-lg:flex-col">
       <div className="flex flex-col max-lg:text-center max-lg:items-center">
         <h2 className="lg:w-80 xl:w-auto text-green-800 max-lg:text-center">
-          SOBRE NÓS
+          {{ $t("aboutUs.title") }}
         </h2>
         <h3 className="mt-7 max-lg:text-center text-green-800">
-          Centro Sustentável Industrial, Tecnológico e Social
+          {{ $t("aboutUs.subtitle") }}
         </h3>
         <p
           className="mt-2 max-lg:text-center xl:pr-28 2xl:pr-60 text-green-800"
         >
-          Nosso Modelo Sustentável de Negócio impulsiona a transformação
-          industrial com foco socioambiental, com inovação total em gestão de
-          resíduos líquidos, sólidos e gasosos, sendo o primeiro parque
-          industrial zero emissões do Brasil. Buscamos equilibrar os aspectos
-          econômicos, sociais e ambientais visando criar valor a longo prazo
-          para as empresas, sociedade e o meio ambiente.
+          {{ $t("aboutUs.description") }}
         </p>
         <button
           @click="emit('anchor', 'contactRef')"
@@ -31,7 +26,7 @@
         @click="emit('open', 'b6SDcbE3y98')"
       >
         <p className="text-green-800 font-bold mb-2 lg:mb-0">
-          Apresentação do Master Plan
+          {{ $t("aboutUs.masterPlanPresentation") }}
         </p>
         <nuxt-img
           className="rounded-3xl w-full border border-green-500 mt-2"
@@ -53,7 +48,7 @@
 
     <div className="flex wrapper-full lg:mt-24 items-center max-lg:flex-col">
       <div className="text-green-800 font-bold mt-12 lg:mt-32">
-        Modelo sustentavel de negócio
+        {{ $t("aboutUs.businessModel") }}
       </div>
       <nuxt-img
         alt="Imagem que mostra o plano ESG. (ambiental, social, governança, econômico, tecnológico)"
@@ -61,13 +56,11 @@
         className="shrink-0  w-[300px]"
       />
       <div className="lg:ml-10 max-lg:text-center">
-        <h3 className="text-green-800 max-lg:mt-10">Visão de Liderança</h3>
+        <h3 className="text-green-800 max-lg:mt-10">
+          {{ $t("aboutUs.leadershipVision") }}
+        </h3>
         <p className="mt-2 text-green-800">
-          Nosso Chamado para liderança em sustentabilidade é inspirar, motivar e
-          promover uma mudança cultural, acreditamos que impactar industrias,
-          pessoas e instituições, é crucial para a construção de uma economia
-          regenerativa e a reformulação de um novo mercado com foco transversal
-          em sustentabilidade.
+          {{ $t("aboutUs.sustainableBusinessModelDescription") }}
         </p>
         <button
           @click="emit('anchor', 'contactRef')"
@@ -83,7 +76,7 @@
         @click="emit('open', 'fL2jcCSN2pc')"
       >
         <p className="text-green-800 font-bold mb-2 lg:mb-0">
-          Chamado para Sustentabilidade
+          {{ $t("aboutUs.sustainability") }}
         </p>
         <nuxt-img
           className="rounded-3xl !w-full border border-green-500 mt-2"
@@ -108,10 +101,9 @@
       id="sustentabilityRef"
     >
       <div className="max-lg:text-center ">
-        <h2 className="text-green-800">Sustentabilidade</h2>
+        <h2 className="text-green-800">{{ $t("") }}</h2>
         <p className="mt-7 text-green-800">
-          Descubra como a adoção de boas práticas e o foco na sustentabilidade
-          podem revolucionar o futuro da indústria, das pessoas e do planeta.
+          {{ $t("aboutUs.sustainabilityDescription") }}
         </p>
       </div>
       <nuxt-img
@@ -163,6 +155,7 @@
   </section>
 </template>
 <script setup lang="ts">
+const { locale } = useI18n();
 const emit = defineEmits(["anchor", "open"]);
 const videos = ref([
   {

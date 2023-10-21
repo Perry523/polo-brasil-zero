@@ -9,42 +9,34 @@
           >
           <h2 class="lg:w-80 xl:w-auto text-green-800 text-center mb-5">
             Net-Zero <br />
-            <h3 class="text-green-800">Ambição 2024</h3>
+            <h3 class="text-green-800">{{$t('netZero.subtitle')}}</h3>
           </h2>
-            A transição para um futuro sustentável exige que as indústrias e
-            instituições assumam um compromisso firme em alcançar a neutralidade
-            de carbono, conhecida como Net Zero. Essa meta é fundamental para
-            mitigar as mudanças climáticas e garantir a preservação do nosso
-            planeta para as gerações futuras.
+            {{$t('netZero.text')}}
             <br />
             <br />
-            Para atingir essa meta é necessário adotar uma abordagem abrangente,
-            considerando os três escopos de emissões definidos pelo Protocolo de
-            Gases de Efeito Estufa (GHG).
+           {{$t('netZero.subtext')}}
             <br />
             <br />
-            <b className="text-green-800 inline">Escopo 1: </b>Refere-se às
-            emissões diretas provenientes das atividades próprias da indústria.
+            <b className="text-green-800 inline">Escopo 1: </b>
+            {{ $t('netZero.escopo1')  }}
             <br />
             <br />
-            <b className="text-green-800 inline">Escopo 2: </b>Abrange as
-            emissões associadas à energia elétrica adquirida.
+            <b className="text-green-800 inline">Escopo 2: </b>
+            {{ $t('netZero.escopo2')  }}
             <br />
             <br />
-            <b className="text-green-800 inline">Escopo 3: </b>Inclui as
-            emissões indiretas de atividades da cadeia de suprimentos e uso dos
-            produtos.
+            <b className="text-green-800 inline">Escopo 3: </b>
+            {{ $t('netZero.escopo3')  }}
             <br />
-            <br />O Polo Brasil Zero foi projetado para atender todos os
-            escopos, possibilitando um protocolo industrial de Emissões Líquidas
-            Zero a partir de 2024.
+            <br />
+            {{ $t('netZero.escopo4')  }}
           </p>
         </div>
         <div
           class="lg:w-[450px] lg:h-[340px] shrink-0 ml-20 relative flex justify-center items-center max-lg:mt-5 max-lg:w-full max-lg:ml-0 flex-col"
         >
           <span class="text-green-800 mt-4 font-bold text-center">
-            Projeção de emissões de GEE na atmosfera - Américas
+            {{ $t('netZero.projection') }}
           </span>
           <img src="/images/netzero.gif" alt="" class="rounded-3xl mt-4" />
           <span class="text-green-800 mt-2">

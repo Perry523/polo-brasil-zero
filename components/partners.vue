@@ -2,13 +2,13 @@
   <div id="partnersRef" class="px-10 pb-10 bg-gray-200 lg:w-full">
     <h2
       class="pt-12 mb-5 lg:mb-0 text-green-800 max-lg:text-center"
-      id="partinersRef"
+      id="partnersRef"
     >
-      Parceiros Estratégicos
+      {{ $t("partnersSection.title") }}
     </h2>
     <div class="flex justify-between w-full max-lg:flex-col items-center">
       <a
-        v-for="(partner, i) in partners"
+        v-for="partner in partners"
         :key="partner.id"
         :href="partner.url"
         target="_blank"
@@ -18,7 +18,7 @@
           :src="partner.imageSrc"
           :alt="partner.alt"
           class="h-16 mx-auto"
-          :class="i === 3 ? 'w-16' : 'w-44 '"
+          :class="partner.id === 3 ? 'w-16' : 'w-44 '"
         />
       </a>
     </div>
@@ -26,6 +26,8 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
+
 const partners = ref([
   {
     id: 1,

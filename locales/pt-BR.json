@@ -1,0 +1,84 @@
+{
+  "aboutUs": {
+    "title": "SOBRE NÓS",
+    "subtitle": "Centro Sustentável Industrial, Tecnológico e Social",
+    "description": "Nosso Modelo Sustentável de Negócio impulsiona a transformação industrial com foco socioambiental, com inovação total em gestão de resíduos líquidos, sólidos e gasosos, sendo o primeiro parque industrial zero emissões do Brasil. Buscamos equilibrar os aspectos econômicos, sociais e ambientais visando criar valor a longo prazo para as empresas, sociedade e o meio ambiente.",
+    "businessModel": "Modelo sustentavel de negócio",
+    "leadershipVision": "Visão de Liderança",
+    "leadershipDescription": "Nosso Chamado para liderança em sustentabilidade é inspirar, motivar e promover uma mudança cultural, acreditamos que impactar industrias, pessoas e instituições, é crucial para a construção de uma economia regenerativa e a reformulação de um novo mercado com foco transversal em sustentabilidade.",
+    "sustainability": "Sustentabilidade",
+    "sustainabilityDescription": "Descubra como a adoção de boas práticas e o foco na sustentabilidade podem revolucionar o futuro da indústria, das pessoas e do planeta.",
+    "masterPlanPresentation": "Apresentação do Master Plan",
+    "sustainableBusinessModel": "Modelo sustentavel de negócio",
+    "sustainableBusinessModelDescription": "Nosso Modelo Sustentável de Negócio impulsiona a transformação industrial com foco socioambiental, com inovação total em gestão de resíduos líquidos, sólidos e gasosos, sendo o primeiro parque industrial zero emissões do Brasil. Buscamos equilibrar os aspectos econômicos, sociais e ambientais visando criar valor a longo prazo para as empresas, sociedade e o meio ambiente."
+  },
+  "netZero": {
+    "title": "Net-Zero",
+    "subtitle": "Ambição 2024",
+    "text": "A transição para um futuro sustentável exige que as indústrias e instituições assumam um compromisso firme em alcançar a neutralidade de carbono, conhecida como Net Zero. Essa meta é fundamental para mitigar as mudanças climáticas e garantir a preservação do nosso planeta para as gerações futuras.",
+    "subtext": "Para atingir essa meta é necessário adotar uma abordagem abrangente, considerando os três escopos de emissões definidos pelo Protocolo de Gases de Efeito Estufa (GHG).",
+    "escopo1": "Refere-se às emissões diretas provenientes das atividades próprias da indústria.",
+    "escopo2": "Abrange as emissões associadas à energia elétrica adquirida.",
+    "escopo3": "Inclui as emissões indiretas de atividades da cadeia de suprimentos e uso dos produtos.",
+    "escopo4": "O Polo Brasil Zero foi projetado para atender todos os escopos, possibilitando um protocolo industrial de Emissões Líquidas Zero a partir de 2024.",
+    "projection": "Projeção de emissões de GEE na atmosfera - Américas",
+    "source": "Fonte: NASA Scientific Visualization Studio"
+  },
+  "preLaunch": {
+    "title": "Pré lançamento de vendas",
+    "phase": "Fase 1",
+    "description": "Todos os lotes são carbono neutro já equipados com tubulações centrais de abastecimento e tratamento de água, rede de coleta dos efluentes Industriais e sanitários ligado na ETE. Tratamento de resíduos I, II, IIA e IIB",
+    "guaranteeTitle": "Garanta seu lote",
+    "deliveryDate": "Entrega finalizada em 2024",
+    "buttonText": "Entrar em contato"
+  },
+  "ourGround": {
+    "title": "Lotes sustentáveis carbono neutro",
+    "description": "Todos os lotes já estão equipados com tubulações centrais de abastecimento e tratamento de água, rede de coleta dos efluentes industriais e sanitários interligados direto na ETAE.",
+    "plantSaleTitle": "Planta de venda dos lotes",
+    "downloadButtonText": "Baixar e-book"
+  },
+  "contact": {
+    "title": "E você, quer fazer parte do nosso projeto sustentável? Entre em contato",
+    "address": "Av. Ayrton Senna da Silva - KM 497 Jardim Industriario, CEP 78099-499 / Cuiabá - MT",
+    "labels": {
+      "name": "Nome:",
+      "email": "Email:",
+      "phone": "Telefone:",
+      "contactType": "Tipo de contato:"
+    },
+    "checkboxLabel": "Declaro que li os termos de uso.",
+    "sendButton": "Enviar"
+  },
+  "navigation": {
+    "closeMenu": "Fechar menu hamburger",
+    "contactButton": "Entrar em contato"
+  },
+  "footer": {
+    "followUsText": "Nos siga nas redes sociais",
+    "menuHeaderText": "Menu",
+    "downloadEbookText": "Baixar e-book",
+    "rightsText": "© 2023 Polobrasilzero by PerryDev - Todos os direitos reservados"
+  },
+  "partnersSection": {
+    "title": "Parceiros Estratégicos",
+    "altText": "Imagem de um parceiro estratégico"
+  },
+  "esgSection": {
+    "title": "Agenda ESG",
+    "noPostsText": "Nenhum post no momento...",
+    "posts": {
+      "post1": {
+        "title": "Centrais de abastecimento e tratamento de água",
+        "date": "12 julho 23 - Terrenos",
+        "alt": "Clique aqui para saber mais a respeito das centrais de abastecimento e tratamento de água."
+      }
+    }
+  },
+  "newsletterSection": {
+    "title": "Assine nossa newsletter com conteúdo exclusivo",
+    "namePlaceholder": "Seu nome",
+    "emailPlaceholder": "Seu e-mail",
+    "buttonText": "Quero assinar"
+  }
+}

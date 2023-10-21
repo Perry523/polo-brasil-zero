@@ -8,8 +8,28 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@pinia-plugin-persistedstate/nuxt",
     // "vite-plugin-pwa"
-    "@vite-pwa/nuxt"
+    "@vite-pwa/nuxt",
+    "@nuxtjs/i18n"
   ],
+  i18n: {
+    locales: [
+      {
+        code: "pt-BR",
+        iso: "pt-BR",
+        file: "pt-BR.json",
+        name: "Português"
+      },
+      {
+        code: "en-US",
+        iso: "en-US",
+        file: "en-US.json",
+        name: "English"
+      }
+    ],
+    defaultLocale: "en-US",
+    lazy: true,
+    langDir: "locales/"
+  },
   typescript: {
     typeCheck: true
   },
@@ -26,6 +46,7 @@ export default defineNuxtConfig({
   piniaPersistedstate: {
     storage: "localStorage"
   },
+
   ssr: false,
   pwa: {
     devOptions: {

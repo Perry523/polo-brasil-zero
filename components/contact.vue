@@ -2,49 +2,41 @@
   <section class="bg-green-700 max-lg:pt-16 lg:py-16" id="contactRef">
     <div class="flex items-center max-lg:flex-col wrapper-full">
       <div class="flex flex-col max-lg:flex">
-        <h2 class="text-white max-lg:text-center">
-          E você, quer fazer parte do nosso projeto sustentável? Entre em
-          contato
-        </h2>
+        <h2 class="text-white max-lg:text-center">{{ $t("contact.title") }}</h2>
         <div class="mt-16 p-3 border-white rounded-md border lg:w-[330px]">
-          <!-- <nuxt-img alt="Ícone de email" src="/images/mail.svg" class="mr-2" /> -->
           <span class="text-white">lhmt@polobrasilzero.com</span>
         </div>
         <div
           class="mt-4 p-3 border-white rounded-md border lg:w-[330px] flex items-center"
         >
-          <!-- <nuxt-img
-            alt="Ícone de endereço"
-            src="/images/map.svg"
-            class="mr-4 shrink-0 h-[21px]"
-          /> -->
-          <span class="text-white block">
-            Av. Ayrton Senna da Silva - KM 497 Jardim Industriario, CEP
-            78099-499 / Cuiabá - MT
-          </span>
+          <span class="text-white block">{{ $t("contact.address") }}</span>
         </div>
       </div>
       <div
         class="flex flex-col gap-y-4 shrink-0 max-lg:w-screen lg:w-[600px] p-12 bg-white rounded-2xl lg:ml-20 max-lg:mt-10 max-lg:shadow-2xl"
       >
-        <Input name="name" placeholder="Seu nome" label="Nome:" />
         <Input
-          name="email"
-          placeholder="Seu melhor email"
-          label="Email:"
+          :name="'name'"
+          :placeholder="'Seu nome'"
+          :label="$t('contact.labels.name')"
+        />
+        <Input
+          :name="'email'"
+          :placeholder="'Seu melhor email'"
+          :label="$t('contact.labels.email')"
           labelClasses="mt-6"
         />
         <Input
-          name="phone"
-          placeholder="Seu telefone"
-          label="Telefone:"
+          :name="'phone'"
+          :placeholder="'Seu telefone'"
+          :label="$t('contact.labels.phone')"
           labelClasses="mt-6"
         />
         <Selectable
-          label="Tipo de contato:"
+          :label="$t('contact.labels.contactType')"
           labelClasses="mt-6"
-          name="contactType"
-          placeholder="Selecione o motivo do contato"
+          :name="'contactType'"
+          :placeholder="'Selecione o motivo do contato'"
           :options="['Comprar um terreno', 'Fazer parceria', 'Outro motivo']"
           :handleSelectOption="handleSelectOption"
           :selectedOption="contactTypeSelectedOption"
@@ -56,7 +48,7 @@
             id="isTermsReaded"
             class="text-green-800"
           />
-          Declaro que li os termos de uso.
+          {{ $t("contact.checkboxLabel") }}
         </span>
         <button
           type="button"
@@ -67,7 +59,7 @@
             src="/images/send.svg"
             class="bt-icon mr-3"
           />
-          Enviar
+          {{ $t("contact.sendButton") }}
         </button>
       </div>
     </div>

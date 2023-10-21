@@ -14,16 +14,19 @@
         <div
           class="lg:flex flex-col items-center m-auto max-lg:mt-12 text-center"
         >
-          <h2 class="text-green-700">Pré lançamento de vendas</h2>
-          <h3 class="mt-2 text-green-700 font-semibold">Fase 1</h3>
+          <h2 class="text-green-700">{{ $t("preLaunch.title") }}</h2>
+          <h3 class="mt-2 text-green-700 font-semibold">
+            {{ $t("preLaunch.phase") }}
+          </h3>
           <p class="mt-5 text-green-800 lg:w-80">
-            Todos os lotes são carbono neutro já equipados com tubulações
-            centrais de abastecimento e tratamento de água, rede de coleta dos
-            efluentes Industriais e sanitários ligado na ETE. Tratamento de
-            resíduos I, II, IIA e IIB
+            {{ $t("preLaunch.description") }}
           </p>
-          <h3 class="mt-5 text-green-700 font-bold">Garanta seu lote</h3>
-          <span class="text-green-700 mt-1"> Entrega finalizada em 2024 </span>
+          <h3 class="mt-5 text-green-700 font-bold">
+            {{ $t("preLaunch.guaranteeTitle") }}
+          </h3>
+          <span class="text-green-700 mt-1">
+            {{ $t("preLaunch.deliveryDate") }}
+          </span>
           <button
             type="button"
             class="bt bt-primary mt-10 flex justify-center items-center max-lg:w-full"
@@ -34,13 +37,14 @@
               src="/images/send.svg"
               class="bt-icon mr-3 w-6"
             />
-            Entrar em contato
+            {{ $t("preLaunch.buttonText") }}
           </button>
         </div>
       </div>
     </div>
   </section>
 </template>
+
 <script setup lang="ts">
 const emit = defineEmits(["anchor"]);
 </script>

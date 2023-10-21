@@ -58,7 +58,7 @@
 </template>
 
 <script setup>
-import { Carousel, Navigation, Slide } from "vue3-carousel";
+import { Carousel, Slide } from "vue3-carousel";
 
 import { ChevronRightIcon, ChevronLeftIcon } from "@heroicons/vue/24/outline";
 import "vue3-carousel/dist/carousel.css";
@@ -76,12 +76,10 @@ function handleBack() {
   innerCarousel.value.prev();
   myCarousel.value.prev();
 }
-// run carousel every 5s
 </script>
 
 <style lang="scss">
 .carousel__item {
-  /* height: 540px; */
   width: 100%;
   background-color: var(--vc-clr-primary);
   color: var(--vc-clr-white);
@@ -95,7 +93,6 @@ function handleBack() {
 .carousel__prev,
 .carousel__next {
   box-sizing: content-box;
-  // border: 5px solid white;
 }
 .carousel__icon {
   border: 3px solid white;
@@ -104,16 +101,4 @@ function handleBack() {
   width: 40px;
   height: 35px;
 }
-
-/* .carousel__pagination-button::after {
-    background-color: rgb(132 132 132 / var(--tw-bg-opacity)) !important;
-  } */
 </style>
-<!-- <style lang="scss" scoped>
-  :deep(.carousel) {
-    display: block;
-    overflow-x: auto;
-    scroll-snap-type: none;
-    scroll-behavior: auto;
-  }
-  </style> -->

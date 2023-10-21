@@ -14,8 +14,8 @@
         />
         <span
           :class="`mt-3 block ${isGreen ? 'text-green-100' : 'text-green-700'}`"
-          >{{ emailText }}</span
-        >
+          >lhmt@polobrasilzero.com
+        </span>
       </div>
       <div class="lg:w-[300px] max-lg:flex max-lg:flex-col max-lg:items-center">
         <h3
@@ -23,7 +23,7 @@
             isGreen ? 'text-green-100' : 'text-green-700'
           } font-bold`"
         >
-          Nos siga nas redes sociais
+          {{ $t("footer.followUsText") }}
         </h3>
         <div
           class="mt-3 space-x-4 flex items-center max-lg:justify-center lg:justify-start"
@@ -44,7 +44,7 @@
             isGreen ? 'text-green-100' : 'text-green-700'
           } max-lg:text-center`"
         >
-          Menu
+          {{ $t("footer.menuHeaderText") }}
         </h3>
         <ul
           :class="`footer-menu flex ${
@@ -54,7 +54,7 @@
           <div>
             <li
               class="max-lg:mr-6"
-              v-for="(menuItem, index) in firstMenuItems"
+              v-for="(menuItem, index) in menuItems.firstMenuItems"
               :key="index"
             >
               <a @click="goToAnchor(menuItem.reference)">{{ menuItem.text }}</a>
@@ -63,13 +63,13 @@
           <div class="ml-10">
             <li
               class="max-lg:mr-6"
-              v-for="(menuItem, index) in secondMenuItems"
+              v-for="(menuItem, index) in menuItems.secondMenuItems"
               :key="index"
             >
               <a @click="goToAnchor(menuItem.reference)">{{ menuItem.text }}</a>
             </li>
             <li @click="goToAnchor('contactRef')" class="font-bold">
-              Baixar e-book
+              {{ $t("footer.downloadEbookText") }}
             </li>
           </div>
         </ul>
@@ -84,25 +84,55 @@
       class="max-lg:bg-ods-footer-mobile lg:bg-ods-footer max-lg:h-[59px] lg:h-[42px] flex justify-center items-center"
     >
       <p class="text-green-100 font-bold max-lg:hidden">
-        © 2023 Polobrasilzero by Blackelphant | Todos os direitos reservados
+        {{ $t("footer.rightsText") }}
       </p>
       <p class="text-green-100 font-bold lg:hidden text-center">
-        © 2023 Polobrasilzero by Blackelphant <br />
-        Todos os direitos reservados
+        {{ $t("footer.rightsText") }}
       </p>
     </div>
+    <NuxtLink
+      v-for="locale in availableLocales"
+      :key="locale.code"
+      :to="switchLocalePath(locale.code)"
+      >{{ locale.name }}</NuxtLink
+    >
   </footer>
 </template>
 
 <script setup>
 import { ref } from "vue";
-
+const { locale } = useI18n();
+const menuItems = computed(() => ({
+  firstMenuItems:
+    locale.value === "en-US"
+      ? [
+          { text: "ESG - Blog", reference: "esgRef" },
+          { text: "About Us", reference: "aboutUsRef" },
+          { text: "Sustainability", reference: "sustentabilityRef" },
+          { text: "Our Ground", reference: "ourGroundRef" },
+        ]
+      : [
+          { text: "ESG - Blog", reference: "esgRef" },
+          { text: "Sobre Nós", reference: "aboutUsRef" },
+          { text: "Sustentabilidade", reference: "sustentabilityRef" },
+          { text: "Terrenos", reference: "ourGroundRef" },
+        ],
+  secondMenuItems:
+    locale.value === "en"
+      ? [
+          { text: "Partners", reference: "partnersRef" },
+          { text: "Contact", reference: "contactRef" },
+        ]
+      : [
+          { text: "Parceiros", reference: "partnersRef" },
+          { text: "Contato", reference: "contactRef" },
+        ],
+}));
 const isGreen = ref(false); // Mudar conforme sua lógica
 const emit = defineEmits(["anchor", "openVideo"]);
 const logoWhite = "/images/logo-white.svg";
 const logoGreen = "/images/logo-green.png";
 const altText = "Logo da empresa Polo Brasil Zero";
-const emailText = "lhmt@polobrasilzero.com";
 const imageClass = "object-left-top";
 
 const socialImages = isGreen.value
@@ -117,18 +147,6 @@ const socialImages = isGreen.value
       "/images/instagram.png",
       "/images/icon-youtube.svg",
     ];
-
-const firstMenuItems = [
-  { text: "Esg - Blog", reference: "esgRef" },
-  { text: "Sobre Nós", reference: "aboutUsRef" },
-  { text: "Sustentabilidade", reference: "sustentabilityRef" },
-  { text: "Terrenos", reference: "ourGroundRef" },
-];
-
-const secondMenuItems = [
-  { text: "Parceiros", reference: "partnersRef" },
-  { text: "Contato", reference: "contactRef" },
-];
 
 function goToAnchor(reference) {
   emit("go-to-anchor", reference);

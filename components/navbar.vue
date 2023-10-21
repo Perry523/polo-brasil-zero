@@ -6,14 +6,31 @@
     ]"
   >
     <div class="wrapper-full flex justify-between items-center">
-      <a href="#" class="shrink-0 sm:w-[250px]">
+      <a href="#" class="shrink-0 sm:w-[250px] flex items-center">
         <!-- Substituir por uma tag <nuxt-img> ou componente de imagem -->
         <nuxt-img
           src="/images/logo-white.svg"
           alt="Logo da empresa Polo Brasil Zero"
           class="w-32 lg:w-40"
         />
+        <nuxt-link
+          class="btn ml-10"
+          v-for="(locale, index) in availableLocales"
+          :key="index"
+          :to="switchLocalePath(locale.code)"
+        >
+          <nuxt-img
+            :src="
+              locale.code == 'en-US'
+                ? 'https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/2560px-Flag_of_Brazil.svg.png'
+                : 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Flag_of_Great_Britain_%281707%E2%80%931800%29.svg/1024px-Flag_of_Great_Britain_%281707%E2%80%931800%29.svg.png'
+            "
+            alt="Bandeira do país"
+            class="w-10"
+          />
+        </nuxt-link>
       </a>
+      <div class="btn"></div>
       <a class="w-9" href="#" @click="toggleMenu">
         <!-- Substituir por uma tag <nuxt-img> ou componente de imagem -->
         <nuxt-img
@@ -38,7 +55,7 @@
             />
           </a>
         </li>
-        <li v-for="(item, index) in arrayForNav" :key="index">
+        <li v-for="(item, index) in menuItems" :key="index">
           <a @click="handleGoToAnchor(item.anchor)">{{ item.label }}</a>
         </li>
         <li>
@@ -53,7 +70,7 @@
               alt="Ícone de baixar"
               class="bt-icon mr-3 w-6"
             />
-            Entrar em contato
+            {{ $t("navigation.contactButton") }}
           </button>
         </li>
       </ul>
@@ -61,12 +78,20 @@
   </nav>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted } from "vue";
 import { XMarkIcon } from "@heroicons/vue/24/solid";
+import ptBr from "@/locales/pt-BR.json";
+import enUs from "@/locales/en-US.json";
+const { locale, locales } = useI18n();
+const switchLocalePath = useSwitchLocalePath();
+const lang = locale.value === "pt-BR" ? ptBr : enUs;
+console.log(lang);
+const availableLocales = computed(() => {
+  return locales.value.filter((i) => i.code !== locale.value);
+});
 const scrollDown = ref(false);
 const isMenuOpen = ref(false);
-
 onMounted(() => {
   const handleScroll = () => {
     const isScrollDown = window.scrollY > 0;
@@ -82,7 +107,7 @@ const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
 };
 
-const handleGoToAnchor = (ref) => {
+const handleGoToAnchor = (ref: any) => {
   if (!ref) {
     // Navegar para a página inicial
     window.location.href = "/";
@@ -92,38 +117,69 @@ const handleGoToAnchor = (ref) => {
   emit("goToAnchor", ref);
 };
 const emit = defineEmits(["goToAnchor"]);
-const arrayForNav = [
-  {
-    label: "Lotes",
-    anchor: "ourGroundRef",
-  },
-  {
-    label: "Sobre nós",
-    anchor: "aboutUsRef",
-  },
-  {
-    label: "Sustentabilidade",
-    anchor: "sustentabilityRef",
-  },
-  {
-    label: "Netzero",
-    anchor: "netzeroRef",
-  },
-  {
-    label: "Parceiros",
-    anchor: "partinersRef",
-  },
-  {
-    label: "ESG",
-    anchor: "esgRef",
-  },
-  {
-    label: "Contato",
-    anchor: "contactRef",
-  },
-];
+const menuItems =
+  locale.value == "en-US"
+    ? [
+        {
+          label: "Lots",
+          anchor: "ourGroundRef",
+        },
+        {
+          label: "About Us",
+          anchor: "aboutUsRef",
+        },
+        {
+          label: "Sustainability",
+          anchor: "sustentabilityRef",
+        },
+        {
+          label: "Netzero",
+          anchor: "netzeroRef",
+        },
+        {
+          label: "Partners",
+          anchor: "partnersRef",
+        },
+        {
+          label: "ESG",
+          anchor: "esgRef",
+        },
+        {
+          label: "Contact",
+          anchor: "contactRef",
+        },
+      ]
+    : [
+        {
+          label: "Lotes",
+          anchor: "ourGroundRef",
+        },
+        {
+          label: "Sobre nós",
+          anchor: "aboutUsRef",
+        },
+        {
+          label: "Sustentabilidade",
+          anchor: "sustentabilityRef",
+        },
+        {
+          label: "Netzero",
+          anchor: "netzeroRef",
+        },
+        {
+          label: "Parceiros",
+          anchor: "partnersRef",
+        },
+        {
+          label: "ESG",
+          anchor: "esgRef",
+        },
+        {
+          label: "Contato",
+          anchor: "contactRef",
+        },
+      ];
 </script>
-
 <style scoped>
 /* seus estilos aqui */
 </style>

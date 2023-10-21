@@ -1,14 +1,14 @@
 <template>
   <section class="bg-green-100 py-16" id="esgRef">
     <div>
-      <h2 class="wrapper-full text-green-800">Agenda ESG</h2>
+      <h2 class="wrapper-full text-green-800">{{ $t("esgSection.title") }}</h2>
       <div class="h-[240px] w-full flex justify-center items-center">
-        <h3 class="text-green-800">Nenhum post no momento...</h3>
+        <h3 class="text-green-800">{{ $t("esgSection.noPostsText") }}</h3>
       </div>
       <!-- Comentado a parte que usa StaticImage como no original
         <div class="mt-9 wrapper-full flex justify-between posts-box overflow-x-scroll invisible-scrollbar max-lg:px-8">
           <div
-            v-for="post in posts"
+            v-for="post in $t('esgSection.posts')"
             :key="post.id"
             class="w-[250px] cursor-pointer"
           >
@@ -31,10 +31,10 @@
 // const posts = ref([
 //   {
 //     id: 1,
-//     title: 'Centrais de abastecimento e tratamento de água',
-//     date: '12 julho 23 - Terrenos',
+//     title: $t('esgSection.posts.post1.title'),
+//     date: $t('esgSection.posts.post1.date'),
 //     imageSrc: '../images/placeholder-hand.png',
-//     alt: 'Clique aqui para saber mais a respeito das centrais de abastecimento e tratamento de água.'
+//     alt: $t('esgSection.posts.post1.alt')
 //   },
 //   // Repita para outros posts
 // ]);

@@ -1,0 +1,84 @@
+{
+  "aboutUs": {
+    "title": "ABOUT US",
+    "subtitle": "Industrial, Technological, and Social Sustainable Center",
+    "description": "Our Sustainable Business Model drives industrial transformation with a socio-environmental focus, with total innovation in the management of liquid, solid, and gaseous waste, being Brazil's first zero-emission industrial park. We seek to balance the economic, social, and environmental aspects aiming to create long-term value for companies, society, and the environment.",
+    "businessModel": "Sustainable Business Model",
+    "leadershipVision": "Leadership Vision",
+    "leadershipDescription": "Our Call for leadership in sustainability is to inspire, motivate, and promote a cultural change. We believe that impacting industries, people, and institutions is crucial to building a regenerative economy and reshaping a new market with a cross-cutting focus on sustainability.",
+    "sustainability": "Sustainability",
+    "sustainabilityDescription": "Discover how adopting good practices and focusing on sustainability can revolutionize the future of industry, people, and the planet.",
+    "masterPlanPresentation": "Master Plan Presentation",
+    "sustainableBusinessModel": "Sustainable Business Model",
+    "sustainableBusinessModelDescription": "Our Sustainable Business Model drives industrial transformation with a socio-environmental focus, with total innovation in the management of liquid, solid, and gaseous waste, being Brazil's first zero-emission industrial park. We seek to balance the economic, social, and environmental aspects aiming to create long-term value for companies, society, and the environment."
+  },
+  "netZero": {
+    "title": "Net-Zero",
+    "subtitle": "2024 Ambition",
+    "text": "The transition to a sustainable future requires industries and institutions to make a firm commitment to achieve carbon neutrality, known as Net Zero. This goal is essential to mitigate climate change and ensure the preservation of our planet for future generations.",
+    "subtext": "To achieve this goal, it is necessary to adopt a comprehensive approach, considering the three emission scopes defined by the Greenhouse Gas Protocol (GHG).",
+    "escopo1": "Refers to direct emissions from industry's own activities.",
+    "escopo2": "Covers emissions associated with acquired electricity.",
+    "escopo3": "Includes indirect emissions from supply chain activities and product use.",
+    "escopo4": "Polo Brasil Zero has been designed to meet all scopes, enabling a Zero Liquid Emissions industrial protocol from 2024.",
+    "projection": "Projection of GHG emissions in the atmosphere - Americas",
+    "source": "Source: NASA Scientific Visualization Studio"
+  },
+  "preLaunch": {
+    "title": "Pre-Sales Launch",
+    "phase": "Phase 1",
+    "description": "All lots are carbon-neutral already equipped with central water supply and treatment pipelines, a network for collecting industrial and sanitary effluents connected to the ETE. Treatment of waste I, II, IIA, and IIB",
+    "guaranteeTitle": "Secure your lot",
+    "deliveryDate": "Delivery completed by 2024",
+    "buttonText": "Contact us"
+  },
+  "ourGround": {
+    "title": "Carbon-Neutral Sustainable Lots",
+    "description": "All lots are already equipped with central water supply and treatment pipelines, a network for collecting industrial and sanitary effluents interconnected directly to ETAE.",
+    "plantSaleTitle": "Lot Sales Plan",
+    "downloadButtonText": "Download e-book"
+  },
+  "contact": {
+    "title": "And you, want to be part of our sustainable project? Get in touch",
+    "address": "Av. Ayrton Senna da Silva - KM 497 Industrial Garden, CEP 78099-499 / Cuiabá - MT",
+    "labels": {
+      "name": "Name:",
+      "email": "Email:",
+      "phone": "Phone:",
+      "contactType": "Contact Type:"
+    },
+    "checkboxLabel": "I declare that I have read the terms of use.",
+    "sendButton": "Send"
+  },
+  "navigation": {
+    "closeMenu": "Close hamburger menu",
+    "contactButton": "Contact us"
+  },
+  "footer": {
+    "followUsText": "Follow us on social media",
+    "menuHeaderText": "Menu",
+    "downloadEbookText": "Download e-book",
+    "rightsText": "© 2023 Polobrasilzero by PerryDev - All rights reserved"
+  },
+  "partnersSection": {
+    "title": "Strategic Partners",
+    "altText": "Image of a strategic partner"
+  },
+  "esgSection": {
+    "title": "ESG Agenda",
+    "noPostsText": "No posts at the moment...",
+    "posts": {
+      "post1": {
+        "title": "Central water supply and treatment",
+        "date": "July 12, 2023 - Grounds",
+        "alt": "Click here to learn more about central water supply and treatment."
+      }
+    }
+  },
+  "newsletterSection": {
+    "title": "Subscribe to our newsletter with exclusive content",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "Your email",
+    "buttonText": "I want to subscribe"
+  }
+}
