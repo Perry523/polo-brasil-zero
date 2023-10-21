@@ -8,8 +8,6 @@
         />
       </div>
     </Slide>
-    <!-- manually creates prev and next button -->
-
     <template #addons="{}">
       <div>
         <div

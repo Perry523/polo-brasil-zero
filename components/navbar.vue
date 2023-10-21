@@ -13,8 +13,10 @@
           alt="Logo da empresa Polo Brasil Zero"
           class="w-32 lg:w-40"
         />
+      </a>
+      <div class="flex items-center">
         <nuxt-link
-          class="btn ml-10"
+          class="btn mr-5"
           v-for="(locale, index) in availableLocales"
           :key="index"
           :to="switchLocalePath(locale.code)"
@@ -29,16 +31,15 @@
             class="w-10"
           />
         </nuxt-link>
-      </a>
-      <div class="btn"></div>
-      <a class="w-9" href="#" @click="toggleMenu">
-        <!-- Substituir por uma tag <nuxt-img> ou componente de imagem -->
-        <nuxt-img
-          src="/images/menu-hamburger.svg"
-          alt="Menu hamburger"
-          class="2xl:!hidden cursor-pointer w-9"
-        />
-      </a>
+        <a class="w-9" href="#" @click="toggleMenu">
+          <!-- Substituir por uma tag <nuxt-img> ou componente de imagem -->
+          <nuxt-img
+            src="/images/menu-hamburger.svg"
+            alt="Menu hamburger"
+            class="2xl:!hidden cursor-pointer w-9"
+          />
+        </a>
+      </div>
       <div
         v-if="isMenuOpen"
         class="bg-black/60 absolute top-0 left-0 w-screen h-screen"

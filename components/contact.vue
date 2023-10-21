@@ -17,18 +17,18 @@
       >
         <Input
           :name="'name'"
-          :placeholder="'Seu nome'"
+          :placeholder="isPtBr ? 'Seu nome' : 'Your name'"
           :label="$t('contact.labels.name')"
         />
         <Input
           :name="'email'"
-          :placeholder="'Seu melhor email'"
+          :placeholder="isPtBr ? 'Seu melhor email' : 'Your e-mail'"
           :label="$t('contact.labels.email')"
           labelClasses="mt-6"
         />
         <Input
           :name="'phone'"
-          :placeholder="'Seu telefone'"
+          :placeholder="isPtBr ? 'Seu telefone' : 'Your phone'"
           :label="$t('contact.labels.phone')"
           labelClasses="mt-6"
         />
@@ -36,8 +36,16 @@
           :label="$t('contact.labels.contactType')"
           labelClasses="mt-6"
           :name="'contactType'"
-          :placeholder="'Selecione o motivo do contato'"
-          :options="['Comprar um terreno', 'Fazer parceria', 'Outro motivo']"
+          :placeholder="
+            isPtBr
+              ? 'Selecione o motivo do contato'
+              : 'Select the reason of contact'
+          "
+          :options="
+            isPtBr
+              ? ['Comprar um terreno', 'Fazer parceria', 'Outro motivo']
+              : ['Buy a land', 'Make a partnership', 'Other reason']
+          "
           :handleSelectOption="handleSelectOption"
           :selectedOption="contactTypeSelectedOption"
         />
@@ -69,7 +77,8 @@
 <script setup>
 import { ref } from "vue";
 const contactTypeSelectedOption = ref(-1);
-
+const { locale } = useI18n();
+const isPtBr = locale.value === "pt-BR";
 const handleSelectOption = (i) => {
   contactTypeSelectedOption.value = i;
 };

@@ -13,13 +13,7 @@
         >
           {{ $t("aboutUs.description") }}
         </p>
-        <button
-          @click="emit('anchor', 'contactRef')"
-          type="button"
-          className="bt bt-outline-primary mt-4"
-        >
-          Saiba mais
-        </button>
+        <saiba-mais @click="emit('anchor', 'contactRef')" />
       </div>
       <div
         className="w-full h-auto lg:w-[450px] lg:h-[340px] shrink-0 lg:ml-20 relative flex justify-center items-center cursor-pointer max-lg:mt-7 flex-col"
@@ -62,13 +56,7 @@
         <p className="mt-2 text-green-800">
           {{ $t("aboutUs.sustainableBusinessModelDescription") }}
         </p>
-        <button
-          @click="emit('anchor', 'contactRef')"
-          type="button"
-          className="bt bt-outline-primary mt-6 lg:mt-4 mb-2 lg:mb-0"
-        >
-          Saiba mais
-        </button>
+        <saiba-mais @click="emit('anchor', 'contactRef')" />
       </div>
       <div
         className="lg:w-[450px] lg:h-[340px] shrink-0 ml-20 relative flex justify-center
@@ -157,41 +145,88 @@
 <script setup lang="ts">
 const { locale } = useI18n();
 const emit = defineEmits(["anchor", "open"]);
-const videos = ref([
-  {
-    id: 1,
-    title: "Reciclagem Hídrica",
-    description: "Tratamento total dos efluentes sanitários e industriais",
-    imageSrc: "/images/video-one.jpg",
-    alt: "Banner do vídeo 1",
-  },
-  {
-    id: 2,
-    title: "Reciclagem Sólidos",
-    description: "Coletas, troca interna e logística reversa dos recicláveis",
-    imageSrc: "/images/video-two.jpg",
-    alt: "Banner do vídeo 2",
-  },
-  {
-    id: 3,
-    title: "Neutralização GEE",
-    description: "Mitigar emissões diretas e neutralizar pegada de carbono",
-    imageSrc: "/images/video-three.jpg",
-    alt: "Banner do vídeo 3",
-  },
-  {
-    id: 4,
-    title: "Matriz Energética",
-    description: "Produção própria de energia limpa, renovável e acessível",
-    imageSrc: "/images/video-four.png",
-    alt: "Banner do vídeo 4",
-  },
-  {
-    id: 5,
-    title: "Urbanismo Social",
-    description: "Desenvolver a comunidade e as pessoas com equidade",
-    imageSrc: "/images/video-five.jpg",
-    alt: "Banner do vídeo 5",
-  },
-]);
+const videos = computed(() =>
+  locale.value === "pt-BR"
+    ? [
+        {
+          id: 1,
+          title: "Reciclagem Hídrica",
+          description:
+            "Tratamento total dos efluentes sanitários e industriais",
+          imageSrc: "/images/video-one.jpg",
+          alt: "Banner do vídeo 1",
+        },
+        {
+          id: 2,
+          title: "Reciclagem Sólidos",
+          description:
+            "Coletas, troca interna e logística reversa dos recicláveis",
+          imageSrc: "/images/video-two.jpg",
+          alt: "Banner do vídeo 2",
+        },
+        {
+          id: 3,
+          title: "Neutralização GEE",
+          description:
+            "Mitigar emissões diretas e neutralizar pegada de carbono",
+          imageSrc: "/images/video-three.jpg",
+          alt: "Banner do vídeo 3",
+        },
+        {
+          id: 4,
+          title: "Matriz Energética",
+          description:
+            "Produção própria de energia limpa, renovável e acessível",
+          imageSrc: "/images/video-four.png",
+          alt: "Banner do vídeo 4",
+        },
+        {
+          id: 5,
+          title: "Urbanismo Social",
+          description: "Desenvolver a comunidade e as pessoas com equidade",
+          imageSrc: "/images/video-five.jpg",
+          alt: "Banner do vídeo 5",
+        },
+      ]
+    : [
+        {
+          id: 1,
+          title: "Water Recycling",
+          description: "Total treatment of sanitary and industrial effluents",
+          imageSrc: "/images/video-one.jpg",
+          alt: "Video 1 Banner",
+        },
+        {
+          id: 2,
+          title: "Solid Recycling",
+          description:
+            "Collection, internal exchange, and reverse logistics of recyclables",
+          imageSrc: "/images/video-two.jpg",
+          alt: "Video 2 Banner",
+        },
+        {
+          id: 3,
+          title: "GHG Neutralization",
+          description:
+            "Mitigating direct emissions and neutralizing carbon footprint",
+          imageSrc: "/images/video-three.jpg",
+          alt: "Video 3 Banner",
+        },
+        {
+          id: 4,
+          title: "Energy Matrix",
+          description:
+            "Own production of clean, renewable, and affordable energy",
+          imageSrc: "/images/video-four.png",
+          alt: "Video 4 Banner",
+        },
+        {
+          id: 5,
+          title: "Social Urbanism",
+          description: "Developing the community and people with equity",
+          imageSrc: "/images/video-five.jpg",
+          alt: "Video 5 Banner",
+        },
+      ]
+);
 </script>
