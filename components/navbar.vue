@@ -23,7 +23,7 @@
         >
           <nuxt-img
             :src="
-              locale.code == 'en-US'
+              locale.code !== 'en-US'
                 ? 'https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/2560px-Flag_of_Brazil.svg.png'
                 : 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Flag_of_Great_Britain_%281707%E2%80%931800%29.svg/1024px-Flag_of_Great_Britain_%281707%E2%80%931800%29.svg.png'
             "
@@ -180,6 +180,12 @@ const menuItems =
           anchor: "contactRef",
         },
       ];
+watch(
+  () => locale.value,
+  (value) => {
+    // window.location.reload();
+  }
+);
 </script>
 <style scoped>
 /* seus estilos aqui */

@@ -55,9 +55,11 @@
           alt="Ícone de baixar"
           class="bt-icon"
         />
-        <span class="ml-3 text-green-700 font-bold text-lg">{{
-          $t("ourGround.downloadButtonText")
-        }}</span>
+        <span
+          @click="downloadEbook"
+          class="ml-3 text-green-700 font-bold text-lg"
+          >{{ $t("ourGround.downloadButtonText") }}</span
+        >
       </button>
     </div>
   </section>
@@ -65,4 +67,7 @@
 
 <script setup>
 const emit = defineEmits(["open"]);
+function downloadEbook() {
+  window.open("/ebook.pdf", "_blank");
+}
 </script>

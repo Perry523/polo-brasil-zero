@@ -35,7 +35,7 @@
                 src="/images/play-circle.png"
                 className="bt-icon mr-3 w-6  h-6 "
               />
-              Conheça o projeto
+              {{ locale === "en-US" ? "Know more" : "Conheça o projeto" }}
             </button>
           </div>
         </div>
@@ -90,7 +90,7 @@ const slidesData = computed(() => {
       ]
     : [
         {
-          title: "Sustainable Center <br /> Brazil Zero Hub",
+          title: "Sustainable Center <br /> Polo Brasil Zero",
           description:
             "A private initiative, where innovation meets social and environmental responsibility, aligned with the UN's sustainable development goals.",
         },

@@ -54,7 +54,7 @@
           {{ $t("aboutUs.leadershipVision") }}
         </h3>
         <p className="mt-2 text-green-800">
-          {{ $t("aboutUs.sustainableBusinessModelDescription") }}
+          {{ $t("aboutUs.leadershipDescription") }}
         </p>
         <saiba-mais @click="emit('anchor', 'contactRef')" />
       </div>

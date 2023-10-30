@@ -87,7 +87,7 @@ export default defineNuxtConfig({
     }
   },
   routeRules: {
-    "/": { prerender: true },
+    "/": { prerender: false },
     "/settings/**": { prerender: false },
     "/api/list-servers": { swr: true },
     "/manifest.webmanifest": {

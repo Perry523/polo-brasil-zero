@@ -10,6 +10,7 @@
       <div class="col-span-12 lg:col-span-7">
         <carousel-images />
       </div>
+
       <div class="flex-1 col-span-12 lg:col-span-5 w-64 text-center mx-auto">
         <div
           class="lg:flex flex-col items-center m-auto max-lg:mt-12 text-center"
@@ -47,4 +48,5 @@
 
 <script setup lang="ts">
 const emit = defineEmits(["anchor"]);
+const { locale, locales } = useI18n();
 </script>

@@ -4,7 +4,9 @@
       <title>Polo Brasil Zero - Distrito Industrial 100% sustentável.</title>
     </head>
     <navbar @go-to-anchor="goToAnchor" />
-    <videos @open="handleOpenVideo('b6SDcbE3y98')" />
+    <keep-alive>
+      <videos @open="handleOpenVideo('b6SDcbE3y98')" sta />
+    </keep-alive>
     <land @anchor="goToAnchor" @open="handleOpenVideo" />
     <lot-about @anchor="goToAnchor" />
     <about @anchor="goToAnchor" @open="handleOpenVideo" />
@@ -34,7 +36,6 @@
 import "animate.css";
 import { ref } from "vue";
 const { $pwa } = useNuxtApp();
-console.log($pwa.showInstallPrompt);
 const isVideoOpen = ref(false);
 const selectedVideoShow = ref("");
 function goToAnchor(anchor) {

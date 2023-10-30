@@ -55,18 +55,26 @@
   </Carousel>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { Carousel, Slide } from "vue3-carousel";
-
 import { ChevronRightIcon, ChevronLeftIcon } from "@heroicons/vue/24/outline";
 import "vue3-carousel/dist/carousel.css";
+const innerCarousel = ref();
+const myCarousel = ref();
 const currentSlide = ref(0);
-const innerCarousel = ref(null);
-const myCarousel = ref(null);
-function goToSlide(slide) {
+
+onMounted(() => {
+  innerCarousel.value.slideTo(0);
+  myCarousel.value.slideTo(0);
+});
+function goToSlide(slide: any) {
   myCarousel.value.slideTo(slide);
+  // myCarousel.value.next();
+
+  // innerCarousel.value.slideTo(slide);
 }
 function handleNext() {
+  console.log(myCarousel.value);
   innerCarousel.value.next();
   myCarousel.value.next();
 }

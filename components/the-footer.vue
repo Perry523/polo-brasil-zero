@@ -68,7 +68,7 @@
             >
               <a @click="goToAnchor(menuItem.reference)">{{ menuItem.text }}</a>
             </li>
-            <li @click="goToAnchor('contactRef')" class="font-bold">
+            <li @click="downloadEbook" href="/ebook.pdf" class="font-bold">
               {{ $t("footer.downloadEbookText") }}
             </li>
           </div>
@@ -134,7 +134,12 @@ const logoWhite = "/images/logo-white.svg";
 const logoGreen = "/images/logo-green.png";
 const altText = "Logo da empresa Polo Brasil Zero";
 const imageClass = "object-left-top";
-
+useSeoMeta({
+  ogImage: "/og-image.png",
+});
+function downloadEbook() {
+  window.open("/ebook.pdf", "_blank");
+}
 const socialImages = isGreen.value
   ? [
       "/images/facebook-white.svg",
