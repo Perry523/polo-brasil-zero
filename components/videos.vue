@@ -1,5 +1,10 @@
 <template>
-  <Carousel v-model="currentImage" id="carousel" ref="carousel">
+  <Carousel
+    @slide-start="carousel.updateSlideWidth()"
+    v-model="currentImage"
+    id="carousel"
+    ref="carousel"
+  >
     <Slide v-for="({ title, description }, i) in slidesData" :key="i">
       <div
         @mouseenter="disableSlide"

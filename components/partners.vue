@@ -18,7 +18,7 @@
           :src="partner.imageSrc"
           :alt="partner.alt"
           class="h-16 mx-auto"
-          :class="partner.id === 3 ? 'w-16' : 'w-44 '"
+          :class="partner.id === 4 ? 'w-20' : 'w-44 '"
         />
       </a>
     </div>

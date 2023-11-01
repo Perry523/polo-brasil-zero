@@ -34,7 +34,8 @@
             :src="image"
             :class="[...imageClass, index === 3 ? 'w-14' : '']"
             :alt="`Social image ${index + 1}`"
-            class="w-10"
+            class="w-10 cursor-pointer"
+            @click="openIG(index)"
           />
         </div>
       </div>
@@ -155,6 +156,14 @@ const socialImages = isGreen.value
 
 function goToAnchor(reference) {
   emit("go-to-anchor", reference);
+}
+function openIG(index) {
+  if (index === 2) {
+    window.open(
+      "https://instagram.com/polobrasilzero?utm_source=qr&igshid=MzNlNGNkZWQ4Mg==",
+      "_blank"
+    );
+  }
 }
 </script>
 <style scoped></style>

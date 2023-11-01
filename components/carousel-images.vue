@@ -1,5 +1,9 @@
 <template>
-  <Carousel v-model="currentSlide" ref="myCarousel">
+  <Carousel
+    @slide-start="myCarousel.updateSlideWidth()"
+    v-model="currentSlide"
+    ref="myCarousel"
+  >
     <Slide v-for="(slide, n) in 40" :key="slide">
       <div class="carousel__item">
         <nuxt-img
@@ -32,6 +36,7 @@
           id="inner-carousel"
           ref="innerCarousel"
           class="mt-3"
+          @slide-start="innerCarousel.updateSlideWidth()"
           :items-to-show="3"
           :wrap-around="true"
         >
