@@ -45,22 +45,28 @@
         alt="Planta do parque industrial"
         class="mx-auto block w-full mt-16 lg:!hidden"
       />
-      <button
-        type="button"
-        class="bt bt-outline-primary mx-auto mt-9 flex justify-center items-center max-lg:w-full"
-        @click="emit('anchor', 'contactRef')"
-      >
-        <nuxt-img
-          src="/images/download.svg"
-          alt="Ícone de baixar"
-          class="bt-icon"
-        />
-        <span
-          @click="downloadEbook"
-          class="ml-3 text-green-700 font-bold text-lg"
-          >{{ $t("ourGround.downloadButtonText") }}</span
+      <div class="flex justify-center mt-10">
+        <nuxt-img class="w-48" src="/ebook.jpeg" />
+      </div>
+      <div class="flex justify-center">
+        <button
+          type="button"
+          class="bt bt-outline-primary mx-auto mt-5 flex justify-center items-center max-lg:w-full"
+          @click="emit('anchor', 'contactRef')"
         >
-      </button>
+          <nuxt-img
+            src="/images/download.svg"
+            alt="Ícone de baixar"
+            class="bt-icon"
+          />
+
+          <span
+            @click="downloadEbook"
+            class="ml-3 text-green-700 font-bold text-lg"
+            >{{ $t("ourGround.downloadButtonText") }}</span
+          >
+        </button>
+      </div>
     </div>
   </section>
 </template>

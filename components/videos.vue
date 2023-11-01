@@ -140,11 +140,11 @@ watch(
 );
 const disableSlide = () => {
   clearInterval(interval);
-  // carousel.value.stop();
 };
 const enableSlide = () => {
   interval = setInterval(() => {
-    if (currentImage.value < slidesData.length - 1) {
+    console.log(currentImage.value, slidesData.length);
+    if (currentImage.value < 4) {
       carousel.value.next();
     } else {
       carousel.value.slideTo(0);
