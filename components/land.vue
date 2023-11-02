@@ -57,7 +57,7 @@
           <nuxt-img
             src="/images/download.svg"
             alt="Ícone de baixar"
-            class="bt-icon"
+            class="bt-icon w-5"
           />
 
           <span
